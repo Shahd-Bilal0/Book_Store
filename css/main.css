@@ -1,38 +1,34 @@
 /* Start Header Style */
 /* use Inter font style */
-header {
-  
-    width: 100%;
+header{  
     position: relative;
     font-family: 'Inter';
+    text-align: center;
 }
-header .container {
+/* header .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto;      
-  }
+} */
 
-  /* Logo centered(100px*100px) */
+ 
 header .logo{
-      grid-row-start:1 ;
-      grid-column-start:3 ;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
+
+      /* display: flex; */
+      /* justify-content: center; */
 }
+ /* Logo centered(100px*100px) */
 header .logo img {
     height: 100px;
     width: 100px;
 }
 /* navigation under the logo  */
-nav {
-      grid-row-start: 2;
-      grid-column:2/5 ;
-} 
+a{
+    text-decoration: none;
+}
 nav a {
 /*  and #000 as color*/
 color: #000;
-text-decoration: none;
 font-weight: bold;
 font-size: 16px;
 }
@@ -42,13 +38,13 @@ nav a.active,nav a:hover {
 }
 nav ul {
   list-style: none;
+  padding: 0 0;
   display: flex;
   justify-content: center;
   flex-flow: row nowrap; 
 }
 nav ul li {   
-    width: 20%;
-    margin: 0 20px;
+    margin: 0 25px;
 }
  
 nav .burger-menu {
@@ -182,5 +178,66 @@ table blockquote {
     text-align: center;
     padding: 50px 0;
 } */
+
+/* Footer styles */
+/* background #000, font-color: #fff */
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0 5px;
+    text-align: center;
+    
+}
+/* Logo (40px*40px) */
+footer .logo img{
+    height:40px ;
+    width: 40px;
+}
+/*  description under the logo with font-size: 24px, */
+footer .description{
+    font-size: 24px;
+    padding: 0 5px;
+    margin: 20px auto;
+}
+/*  social media logos under the description
+    with 15px*15px each on
+*/
+footer .social-icons a  {
+    background-color: #313131;
+    color: #b9b9b9;
+    font-size: 15px;
+    height:40px ;
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+footer  .social-icons .linkedin:hover {
+    background-color: #073954;
+  }
+  footer  .social-icons .twitter:hover {
+    background-color: #1da1f2;
+  }
+footer  .social-icons .youtube:hover {
+    background-color: #ff0000;
+  }
+/* and the copyright under the social logos */
+.copyright {
+    font-size: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(218, 206, 206);
+}
+footer .copyright span {
+    font-weight: bold;
+    color: #1787e0;
+  }
+
+
+  
 
 
