@@ -58,7 +58,7 @@ nav {
     text-align: center;
 }
 nav ul {
-    flex-flow: column nowrap; 
+    flex-flow: column nowrap;
     text-align: left;
     position: absolute;
     top: 130px;
@@ -71,6 +71,26 @@ nav ul {
     text-align: left;
     background-color:#eee;
     display: none;
+    opacity: 0; 
+    animation-name: playOp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    
+}
+li {
+    opacity: 0;
+    animation-name: playOp;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes playOp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 nav li a{
     display: block;
