@@ -184,7 +184,11 @@ footer .logo{
     margin-top: 15px;
 }
 footer .logo h1{
-    color: var(--darkYellow);
+    color: var(--darkblue);
+    font-size: 20px;
+}
+footer .logo span{
+    color: var(--darkblue-color);
     font-size: 20px;
 }
 footer .logo img{
