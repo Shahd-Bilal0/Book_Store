@@ -22,6 +22,7 @@ body{
 .container{
     margin: 0 auto;
     padding: 0 15px;
+    align-items: center;
 }
 a{
     text-decoration: none;
@@ -35,7 +36,6 @@ header{
 }
 header .container {
     display:flex;
-    align-items: center;
     justify-content: space-between;
 }
 header .logo{
@@ -142,6 +142,7 @@ nav ul li:not(:last-child) a{
 
 /* Start Hero Banner Style */
 .hero-banner {
+    text-align: center;
     font-family: "Work Sans", sans-serif;
     background-image: url(../assets/images/herobanner.PNG);
     background-size: cover;
@@ -151,7 +152,6 @@ nav ul li:not(:last-child) a{
 .hero-banner .bann{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
-    gap:20px;
     padding-top: 60px;
     justify-items: center;
 }
@@ -165,16 +165,16 @@ nav ul li:not(:last-child) a{
 }
 .hero-banner .hero-info {
     text-align: center;
-    width: 80%; 
     display: flex;
     flex-direction: column;
     max-width: 400px;
     order:2;
+    margin-top: 50px;
 }
 .hero-banner .hero-info h1 {
     margin: 0;
     font-weight: bold;
-    font-size: 40px; 
+    font-size: 30px; 
     color: rgb(193 15 115); 
 }
 .hero-banner .hero-info .btn {
@@ -307,19 +307,23 @@ footer .copyright span {
         
     }
     .hero-banner .bann{
-        padding: 60px 0;
+        justify-items: unset;
+    }
+    .hero-banner .bann{
+        padding: 150px 0;
         align-items: center;
     }
     .hero-banner .hero-info {
         text-align: left;
         order:0;
+        margin: 0 0;
     }
     .hero-banner .hero-info h1 {
-        font-size: 60px; 
         line-height: 2;
+        font-size: 50px;
     }
     .hero-banner .hero-info .btn {
-        width: 80%; 
+       width: 150px;
     }
 }
 
