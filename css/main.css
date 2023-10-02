@@ -75,6 +75,8 @@ nav ul {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+    z-index: 1;
+    background-color: #4ddffe;
     
 }
 li {
