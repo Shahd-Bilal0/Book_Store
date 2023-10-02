@@ -20,9 +20,10 @@ body{
     font-family: 'Inter', sans-serif;
 }
 .container{
+    /* background-color: #ff0000; */
     margin: 0 auto;
     padding: 0 15px;
-    align-items: center;
+    /* align-items: center; */
 }
 a{
     text-decoration: none;
@@ -41,6 +42,7 @@ header .container {
 header .logo{
     display: flex;
     align-items: flex-end;
+    align-self: center;
 }
 header .logo h3{
     color: var(--darkblue-color);
@@ -141,53 +143,64 @@ nav ul li:not(:last-child) a{
 /* End   Header Style*/
 
 /* Start Hero Banner Style */
-.hero-banner {
-    text-align: center;
-    font-family: "Work Sans", sans-serif;
-    background-image: url(../assets/images/herobanner.PNG);
-    background-size: cover;
-    height: 800px; 
+.hero-banner{
+    position: relative;
+    /* background-color: #004380; */
+    height: 800px;
 }
-
-.hero-banner .bann{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
-    padding-top: 60px;
-    justify-items: center;
+.hero-banner .container {
+    position: absolute;
+    display:flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }
-.hero-banner .col {
-    width: 80%;
-    max-width: 400px;
-}
-.hero-banner .col img{
+video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    height: 400px;
 }
-.hero-banner .hero-info {
+.videowrap {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    overflow: hidden;
+}
+.hero-banner .container{
+    position: relative;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    order:2;
-    margin-top: 50px;
+    justify-content: center;
+}
+.hero-banner .hero-info{
+    text-align: center;
+    padding: 10px 0;    
+    color: white;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
 }
 .hero-banner .hero-info h1 {
     margin: 0;
     font-weight: bold;
     font-size: 30px; 
-    color: rgb(193 15 115); 
+    line-height: 2;
+    color: #000;
 }
 .hero-banner .hero-info .btn {
-    padding: 10px 20px;
     margin: 30px 0px;
-    background-color: rgb(193 15 115); 
-    color: #fff; 
+    padding: 10px 20px;
+    background-color: #fff; 
+    color: #000; 
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     font-size: 20px; 
     border-color: transparent;
 }
+
+
 /* End   Hero Banner Style */
 
 /* Start What we do Style */
@@ -304,27 +317,39 @@ footer .copyright span {
     nav ul li a.active,nav ul li a:hover {
         color: var(--darkblue-color);
         border-bottom: 1px solid #cac423;
-        
     }
-    .hero-banner .bann{
-        justify-items: unset;
+    .hero-banner{
+        position: relative;
+        /* background-color: #004380; */
+        height: 800px;
     }
-    .hero-banner .bann{
-        padding: 150px 0;
-        align-items: center;
+    .hero-banner .container {
+        position: unset;
+        display:flex;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-50%);
+        -webkit-transform: translate(0,-50%);
+        -moz-transform: translate(0,-50%);
+        -ms-transform: translate(0,-50%);
+        -o-transform: translate(0,-50%);
+}
+
+    .hero-banner .container{
+        position: relative;
+        justify-content: flex-start;
     }
-    .hero-banner .hero-info {
+    .hero-banner .hero-info{
         text-align: left;
-        order:0;
-        margin: 0 0;
+        /* background-color: yellow; */
     }
     .hero-banner .hero-info h1 {
-        line-height: 2;
-        font-size: 50px;
+        font-size: 60px; 
     }
     .hero-banner .hero-info .btn {
-       width: 150px;
+       
     }
+
 }
 
 /* Large screens (1025px and above) */
