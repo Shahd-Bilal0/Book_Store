@@ -32,7 +32,7 @@ a{
 
 /* Start Header Style */
 header{
-    background-color: #4ddffe;
+    background-color: #f9b442;
     padding:20px;
 }
 header .container {
@@ -51,7 +51,7 @@ header .logo h3{
     display: none;
 }
 header .logo span{
-    color: var(--darkYellow);
+    /* color: var(--darkYellow); */
 }
 header .logo img{
     margin-right: 5px;
@@ -78,7 +78,7 @@ nav ul {
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     z-index: 1;
-    background-color: #4ddffe;
+    background-color: #f9b442;
     
 }
 li {
@@ -191,8 +191,8 @@ video {
 .hero-banner .hero-info .btn {
     margin: 30px 0px;
     padding: 10px 20px;
-    background-color: #fff; 
-    color: #000; 
+    background-color: #000; 
+    color: #fff; 
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -235,7 +235,7 @@ footer .logo h3 {
     padding-top: 5px;
 }
 footer .logo span{
-    color: var(--darkYellow);
+    /* color: var(--darkYellow); */
 }
 footer .logo img{
     margin-right: 7px;
