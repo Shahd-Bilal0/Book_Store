@@ -2,7 +2,7 @@
 :root {
     --darkblue-color: #004380;
     --lightblue-color: #79BFEA;
-    --darkYellow:#FFDE59;
+    --darkYellow:#fef692;
     --section-padding: 60px;
     --main-duration: 0.5s;
     --v:0;
@@ -30,7 +30,7 @@ a{
 
 /* Start Header Style */
 header{
-    background-color: #eee;
+    background-color: #4ddffe;
     padding:20px;
 }
 header .container {
@@ -69,7 +69,6 @@ nav ul {
     list-style: none;
     padding: 0 0;
     text-align: left;
-    background-color:#eee;
     display: none;
     opacity: 0; 
     animation-name: playOp;
@@ -138,53 +137,49 @@ nav ul li a.active,nav a:hover{
 nav ul li:not(:last-child) a{
     border-bottom:1px solid var(--darkblue-color) ;
 }   
-/* Tablet (768px - 1024px) */
-@media screen and (min-width: 768px) {
-    nav .icons{
-        display: none;
-    }
-    header .container {
-        width: 750px;
-        flex-flow: column;
-        text-align: center;
-    }
-    header .logo{
-        display: flex;
-        align-items: flex-end;
-    }
-    header .logo h3{
-        display: block;
-    }
-    nav ul {
-        display: flex;
-        justify-content: center;
-        flex-flow: row nowrap; 
-        text-align: center;
-        position: static;
-        height: auto;
-        width: auto;
-    }
-    nav ul li {
-        margin: 0 25px;
-    }
-    nav ul li:not(:last-child) a{
-        border-bottom:1px solid transparent ;
-    }  
-    nav ul li a.active,nav ul li a:hover {
-        color: var(--darkblue-color);
-        border-bottom: 1px solid #cac423;
-        
-    }
-}
-
-/* Large screens (1025px and above) */
-@media screen and (min-width: 1025px) {
-
-}
-
 /* End   Header Style*/
 
 /* Start Hero Banner Style */
+/* Restyle the hero banner
+it should be centered on mobile and
+ left aligned with the navigation items
+  on desktop */
+/* Restyled .hero-banner */
+.hero-banner {
+    font-family: "Work Sans", sans-serif;
+    background-image: url(../assets/images/herobanner.PNG);
+    background-size: cover;
+    height: 600px; /* Adjust the height as needed */
+    position: relative;
+}
+
+/* Restyled .hero-info */
+.hero-banner .hero-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px; 
+    text-align: center;
+}
+
+.hero-banner .hero-info h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 40px; 
+    color: rgb(193 15 115); 
+}
+.hero-banner .hero-info .btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: rgb(193 15 115); 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px; 
+}
+
 /* End   Hero Banner Style */
 
 /* Start What we do Style */
@@ -263,3 +258,86 @@ footer .copyright span {
     color: var(--lightblue-color);
 }
 /* End   footer Style*/
+/* Tablet (768px - 1024px) */
+@media screen and (min-width: 768px) {
+    nav .icons{
+        display: none;
+    }
+    header .container {
+        width: 750px;
+        flex-flow: column;
+        text-align: center;
+    }
+    header .logo{
+        display: flex;
+        align-items: flex-end;
+    }
+    header .logo h3{
+        display: block;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-flow: row nowrap; 
+        text-align: center;
+        position: static;
+        height: auto;
+        width: auto;
+    }
+    nav ul li {
+        margin: 0 25px;
+    }
+    nav ul li:not(:last-child) a{
+        border-bottom:1px solid transparent ;
+    }  
+    nav ul li a.active,nav ul li a:hover {
+        color: var(--darkblue-color);
+        border-bottom: 1px solid #cac423;
+        
+    }
+    .hero-banner{
+        position: static;
+        padding: 20px
+    }
+    .hero-banner .container{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .hero-banner .hero-info {
+        width: 80%; 
+        max-width: 400px; 
+        display: inline-block;
+        position: static;
+        transform: translate(0%, 0%);
+        padding: 20px;
+        text-align: center;
+        -webkit-transform: translate(0%, 0%);
+        -moz-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+}
+    .hero-banner .hero-info h1 {
+        line-height: 1.2;
+        margin: 0;
+        font-weight: bold;
+        font-size: 80px; 
+        color: rgb(193 15 115); 
+    }
+    .hero-banner .hero-info .btn {
+        padding: 10px 20px;
+        margin-top: 30px;
+        width: 150px;
+        background-color: rgb(193 15 115); 
+        color: #fff; 
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 20px; 
+    }
+}
+
+/* Large screens (1025px and above) */
+@media screen and (min-width: 1025px) {
+
+}
