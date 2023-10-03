@@ -50,9 +50,6 @@ header .logo h3{
     margin: 0.67em 0;
     display: none;
 }
-header .logo span{
-    /* color: var(--darkYellow); */
-}
 header .logo img{
     margin-right: 5px;
 }
@@ -153,8 +150,7 @@ nav ul li:not(:last-child) a{
     display:flex;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    
+    transform: translate(-50%,-50%);   
 }
 video {
     object-fit: cover;
@@ -199,11 +195,34 @@ video {
     font-size: 20px; 
     border-color: transparent;
 }
-
-
 /* End   Hero Banner Style */
 
 /* Start What we do Style */
+.services{
+    /* background-color: #004380; */
+    padding: 60px 0;
+    text-align: center;
+}
+.services .txt{
+    /* background-color: #cac423; */
+}
+.services .txt h3{
+    margin: 0;
+}
+.services .txt p{
+
+}
+.services .service{
+    margin: 30px 0;
+    /* background-color: pink; */
+}
+.services .service .serv{
+    margin: 20px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
 /* End   What we do Style */
 
 /* Start Features Style */
@@ -233,9 +252,6 @@ footer .logo h3 {
     color: var(--darkblue-color);
     font-size: 19px;
     padding-top: 5px;
-}
-footer .logo span{
-    /* color: var(--darkYellow); */
 }
 footer .logo img{
     margin-right: 7px;
@@ -333,8 +349,7 @@ footer .copyright span {
         -moz-transform: translate(0,-50%);
         -ms-transform: translate(0,-50%);
         -o-transform: translate(0,-50%);
-}
-
+    }
     .hero-banner .container{
         position: relative;
         justify-content: flex-start;
@@ -346,10 +361,6 @@ footer .copyright span {
     .hero-banner .hero-info h1 {
         font-size: 60px; 
     }
-    .hero-banner .hero-info .btn {
-       
-    }
-
 }
 
 /* Large screens (1025px and above) */
