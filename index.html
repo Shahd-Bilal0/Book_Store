@@ -123,21 +123,26 @@
     <!-- Start Contact  -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <div class="input">
-                    <label for="email">Your email:</label>
-                    <input type="email" id="email" name="email" >
+            <div class="cont">
+                <div class="col">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <br>
-                <div class="input">
-                    <label for="question"> Your question:</label>
-                    <textarea id="question" name="question" placeholder="Type your question" ></textarea>
+                <div class="col2">
+                    <h2>Get in touch </h2>
+                    <form action="#" method="post">
+                        <div class="ico">
+                            <input type="text" id="name" name="name"  placeholder="Name" >
+                            <i class="iconform fa fa-user"></i>
+                        </div>
+                        <div class="ico">
+                            <input type="email" id="email" name="email"  placeholder="Email" >
+                            <i class="iconform fa fa-envelope"></i>
+                        </div>
+                        <textarea id="question" name="question" placeholder="Message" ></textarea>
+                        <button type="submit" class="btn">submit</button>
+                    </form>
                 </div>
-                <br>
-                <button type="submit" class="btn">submit</button>
-            <br>
-            </form>
+            </div>
         </div>
     </section>
     <!-- End   Contact  -->   

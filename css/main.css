@@ -281,10 +281,10 @@ video {
 }
 .features .feature .col img{
     max-width: 100%;
-    /* border: 10px solid; */
-    border-top-left-radius: 10px;
+    /*border: 10px solid;
+    *//*border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
+    */
 }
 .features .feature .col blockquote{
     padding: 20px;
@@ -303,15 +303,82 @@ video {
 
 /* Start Contact Style */
 .contact{
+    background-color: var(--lightblue-color);
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
+.contact .container{
+    padding: 80px;
+    /* width: fit-content;
+    margin:20px ; */
+    background-color: #eee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.contact .cont{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+.contact .cont .col i{
+    font-size: 200px;
+    color:#073954;
+}
+.contact .cont .col2 {
+    justify-self: start;
+}
+.contact .cont .col2 form input,textarea,.btn{
+    width: 100%;
+    background-color: white;
+    height: 50px;
+    margin-bottom:20px ;
+    border-color: transparent;
+    border-radius: 25px;
+    padding: 10px 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.contact .cont .col2 form textarea{
+    min-height: 150px;
+    padding: 10px 20px;
+}
+.contact .cont .col2 form .btn{
+    background-color: #073954;
+    color: white;
+    font-weight: bold;
+}
+.contact .cont .col2  h2{
+    color: #073954;
+    font-weight: bold;
+}
+.contact .cont .ico {
+    position: relative;
+
+}
+.contact .cont .ico .iconform{
+    position: absolute;
+    color: #777;
+    top: 15px;
+    left: 20px;
+}
+/* input:focus + .iconform{
+    color: #10cab7;    
+} */
+
+
 /* End   Contact Style */
 
 /* Start footer Style */
 footer{
-    background-color: #000;
-    color:#fff ;
+    background-color: #eee;
+    color:#000 ;
     padding:20px;
     text-align: center;
 }
