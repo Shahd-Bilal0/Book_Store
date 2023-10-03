@@ -1,7 +1,7 @@
 /* Start Variables */
 :root {
     --darkblue-color: #004380;
-    --lightblue-color: #79BFEA;
+    --lightblue-color: #10cab7;
     --darkYellow:#fef692;
     --section-padding: 60px;
     --main-duration: 0.5s;
@@ -199,29 +199,48 @@ video {
 
 /* Start What we do Style */
 .services{
-    /* background-color: #004380; */
-    padding: 60px 0;
+    background-color: #eee;
+    padding: var(--section-padding) 0;
     text-align: center;
 }
 .services .txt{
     /* background-color: #cac423; */
 }
 .services .txt h3{
-    margin: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--lightblue-color);
 }
 .services .txt p{
-
+    color: #777;
 }
 .services .service{
-    margin: 30px 0;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(calc((720px - 60px) / 4),1fr));
+    gap: 20px;
     /* background-color: pink; */
 }
 .services .service .serv{
-    margin: 20px 0;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
+.services .service .serv i{
+    color: var(--lightblue-color);
+}
+.services .service .serv h3{
+    font-weight: 800;
+    margin: 30px 0;
+}
+.services .service .serv p{
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+}
+
 
 /* End   What we do Style */
 
