@@ -307,7 +307,7 @@ video {
 }
 .contact .container{
     padding: 80px;
-    background-color: #eee;
+    background-color: #073954;
 }
 .contact .cont{
     display: grid;
@@ -318,12 +318,12 @@ video {
 }
 .contact .cont .col i{
     font-size: 200px;
-    color:#073954;
+    color:#eee;
 }
 .contact .cont .col2 {
-    justify-self: start;
+    text-align: center;
 }
-.contact .cont .col2 form input,textarea,.btn{
+.contact .cont  input,textarea,.btn{
     width: 100%;
     background-color: white;
     height: 50px;
@@ -336,17 +336,18 @@ video {
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
+.contact .cont .btn{
+    background-color:white ;
+    color: #073954;
+    font-weight: bold;
+}
 .contact .cont .col2 form textarea{
     min-height: 150px;
     padding: 10px 20px;
 }
-.contact .cont .col2 form .btn{
-    background-color: #073954;
-    color: white;
-    font-weight: bold;
-}
+
 .contact .cont .col2  h2{
-    color: #073954;
+    color: #eee;
     font-weight: bold;
 }
 .contact .cont .ico {
@@ -503,7 +504,22 @@ footer .copyright span {
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-}
+    }
+    .contact .cont .col2 form .btn{
+        background-color: #073954;
+        color: white;
+    }
+    .contact .cont .col i{
+        color:#073954;
+    }
+    .contact .cont .col2 {
+        text-align: left;
+    }
+    .contact .cont .col2 h2{
+        color: #073954;
+    }
+
+
 }
 
 /* Large screens (1025px and above) */
