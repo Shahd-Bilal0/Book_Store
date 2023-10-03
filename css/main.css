@@ -273,12 +273,17 @@ video {
     /* background-color: pink; */
 }
 .features .feature .col{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     background-color: white;
     display: flex;
     flex-direction: column;
 }
 .features .feature .col img{
     max-width: 100%;
+    /* border: 10px solid; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
 }
 .features .feature .col blockquote{
