@@ -303,20 +303,11 @@ video {
 
 /* Start Contact Style */
 .contact{
-    background-color: var(--lightblue-color);
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+    padding: 0 0;
 }
 .contact .container{
     padding: 80px;
-    /* width: fit-content;
-    margin:20px ; */
     background-color: #eee;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 .contact .cont{
     display: grid;
@@ -485,10 +476,6 @@ footer .copyright span {
         top: 50%;
         left: 0;
         transform: translate(0,-50%);
-        -webkit-transform: translate(0,-50%);
-        -moz-transform: translate(0,-50%);
-        -ms-transform: translate(0,-50%);
-        -o-transform: translate(0,-50%);
     }
     .hero-banner .container{
         position: relative;
@@ -504,6 +491,19 @@ footer .copyright span {
     .services .service{
         grid-template-columns: repeat(auto-fill,minmax(calc((720px - 60px) / 4),1fr));
     }
+    .contact{
+        background-color: #073954;
+        padding: var(--section-padding) 0;
+    }
+    .contact .container{
+        padding: 80px;
+        background-color: #eee;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
 }
 
 /* Large screens (1025px and above) */
