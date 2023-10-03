@@ -227,6 +227,7 @@ video {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    margin-top: 50p;
 }
 .services .service .serv i{
     color: var(--lightblue-color);
@@ -240,7 +241,22 @@ video {
     color: #777;
     font-size: 17px;
 }
-
+.services .service .serv span{
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation: count-up 3s linear;
+}
+@keyframes count-up {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* End   What we do Style */
 
