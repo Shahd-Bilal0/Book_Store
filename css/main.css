@@ -298,7 +298,64 @@ video {
   margin: 0;
   font-size: 40px;
 }
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
+.modalContent {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  border: 2px solid var(--lightblue-color);
+  animation-name: open;
+  animation-duration: var(--main-duration);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.modalHeader {
+  background: var(--lightblue-color);
+  padding: 15px;
+  color: #fff;
+}
+
+.modalBody {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.features .closeM {
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.features .closeM:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* End   Features Style */
 
 /* Start Contact Style */
