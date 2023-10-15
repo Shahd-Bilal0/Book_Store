@@ -559,6 +559,9 @@ footer .copyright span {
   .modalHeader {
     font-size: 20px;
   }
+  .modalContent {
+    width: 40%;
+  }
   .contact {
     background-color: #073954;
     padding: var(--section-padding) 0;
