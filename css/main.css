@@ -298,6 +298,7 @@ video {
   margin: 0;
   font-size: 40px;
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -329,6 +330,7 @@ video {
   background: var(--lightblue-color);
   padding: 15px;
   color: #fff;
+  font-size: 13px;
 }
 
 .modalBody {
@@ -553,6 +555,9 @@ footer .copyright span {
       auto-fill,
       minmax(calc((720px - 60px) / 4), 1fr)
     );
+  }
+  .modalHeader {
+    font-size: 20px;
   }
   .contact {
     background-color: #073954;
