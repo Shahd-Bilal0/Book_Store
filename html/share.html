@@ -19,7 +19,7 @@
       <li><a href="book.html"> Books </a></li>
       <li><a href="categories.html"> Categories</a></li>
       <li><a href="Blog.html" target="_blank">Blog</a></li>
-      <li><a href="index.html#contact"> Contact </a></li>
+      <li><a href="../html/index.html#contact"> Contact </a></li>
     </ul>
   </nav>
 </div>
@@ -76,15 +76,10 @@
 
   menuLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
-      // Remove the "active" class from all links
       menuLinks.forEach(function (l) {
         l.classList.remove("active");
       });
-
-      // Add the "active" class to the clicked link
       link.classList.add("active");
-
-      // Toggle classes for other elements
       uls.classList.toggle("act");
       bar.classList.toggle("active");
       clos.classList.toggle("activee");
