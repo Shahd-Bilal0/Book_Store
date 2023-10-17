@@ -251,9 +251,9 @@ footer .copyright span {
     border-bottom: 1px solid transparent;
   }
   .menu li a:hover,
-  .menu li a:active {
+  .menu li a.active {
     color: var(--darkblue-color);
-    border-bottom: 1px solid #cac423;
+    border-bottom: 1px solid #cac423 !important;
     padding-left: 15px;
   }
 }
