@@ -122,41 +122,98 @@ video {
   background-color: #eee;
   padding: var(--section-padding) 0;
 }
-.features .feature {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  /* background-color: pink; */
+.slider-container {
+  background-color: #009688;
+  margin: 10px auto;
+  /* width: 400px; */
+  height: 350px;
+  position: relative;
 }
-.features .feature .col {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
 }
-.features .feature .col img {
-  max-width: 100%;
-  /*border: 10px solid;
-    */ /*border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    */
+.slider-container img.active {
+  opacity: 1;
 }
-.features .feature .col blockquote {
-  padding: 20px;
-  color: #545454;
-  line-height: 1.6;
-  margin-bottom: 0;
+.slider-container .slide-number {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 20px;
+  z-index: 2;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
-.features h3 {
+.slider-controls {
+  overflow: hidden;
+}
+.slider-controls .prev,
+.slider-controls .next {
+  background-color: var(--lightblue-color);
+  color: #fff;
+  font-size: 16px;
   text-align: center;
-  font-weight: 800;
-  margin: 0;
-  font-size: 40px;
-  color: var(--lightblue-color);
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 5px;
+  user-select: none;
+  width: 20%;
 }
-
+.slider-controls .prev {
+  float: left;
+}
+.slider-controls .next {
+  float: right;
+}
+.slider-controls .prev.disabled,
+.slider-controls .next.disabled {
+  background-color: #0043807d;
+  cursor: no-drop;
+}
+.slider-controls .indicators {
+  width: 60%;
+  float: left;
+}
+.slider-controls .indicators ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+.slider-controls .indicators ul li {
+  display: inline-block;
+  background-color: white;
+  color: var(--lightblue-color);
+  font-weight: bold;
+  height: 28px;
+  width: 28px;
+  border-radius: 4px;
+  margin: 0 2px;
+  line-height: 28px;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.slider-controls .indicators ul li.active {
+  background-color: var(--lightblue-color);
+  color: #fff;
+}
 .modal {
   display: none;
   position: fixed;
@@ -164,7 +221,7 @@ video {
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
 }

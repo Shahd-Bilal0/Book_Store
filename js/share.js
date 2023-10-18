@@ -5,7 +5,7 @@ fetch("../html/share.html")
     const doc = pars.parseFromString(data, "text/html");
     const head = doc.querySelector(".hd");
     const foot = doc.querySelector(".ft");
-    // console.log(doc);
+
     document.querySelector("header").appendChild(head);
     document.querySelector("footer").appendChild(foot);
     eval(doc.querySelector("script").textContent);
