@@ -2,11 +2,15 @@
 let modal = document.querySelector(".modal");
 let closeBtn = document.getElementsByClassName("closeM")[0];
 let quotes = document.querySelectorAll(".slider-container .col");
-console.log(quotes);
+
 quotes.forEach(function (e) {
   e.addEventListener("click", function () {
     quotes.forEach(function (e) {
-      if (e.classList.contains("active")) openModal(e);
+      if (e.classList.contains("active")) {
+        console.log(e.children[1].textContent.trim());
+        console.log(e.children[1].innerHTML);
+        openModal(e.children[1].innerHTML);
+      }
     });
   });
 });
@@ -22,9 +26,10 @@ window.addEventListener("click", (e) => {
 });
 
 function openModal(e) {
+  console.log(e);
   var qt = document.getElementById("qt");
   var st = document.getElementById("st");
-  qt.innerText = e.innerText;
+  qt.innerText = e;
   st.innerText = "source";
   modal.style.display = "block";
 }
