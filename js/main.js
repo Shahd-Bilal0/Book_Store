@@ -1,38 +1,37 @@
-//MODAL
-// let modal = document.querySelector(".modal");
-// let closeBtn = document.getElementsByClassName("closeM")[0];
-// let quotes = document.querySelectorAll(".feature .col");
+// MODAL
+let modal = document.querySelector(".modal");
+let closeBtn = document.getElementsByClassName("closeM")[0];
+let quotes = document.querySelectorAll(".slider-container .col");
+console.log(quotes);
+quotes.forEach(function (e) {
+  e.addEventListener("click", function () {
+    quotes.forEach(function (e) {
+      if (e.classList.contains("active")) openModal(e);
+    });
+  });
+});
 
-// quotes.forEach(function (e) {
-//   e.addEventListener("click", function () {
-//     var quote = e.innerText;
-//     console.log(quote);
-//     var source = "Riyad alsalihen";
-//     openModal(quote, source);
-//   });
-// });
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
 
-// closeBtn.addEventListener("click", () => {
-//   modal.style.display = "none";
-// });
+window.addEventListener("click", (e) => {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+});
 
-// window.addEventListener("click", (e) => {
-//   if (e.target == modal) {
-//     modal.style.display = "none";
-//   }
-// });
-
-// function openModal(quote, source) {
-//   var qt = document.getElementById("qt");
-//   var st = document.getElementById("st");
-//   qt.innerText = quote;
-//   st.innerText = source;
-//   modal.style.display = "block";
-// }
+function openModal(e) {
+  var qt = document.getElementById("qt");
+  var st = document.getElementById("st");
+  qt.innerText = e.innerText;
+  st.innerText = "source";
+  modal.style.display = "block";
+}
 
 //carousel
 //get carousel items |Array.form[es6]
-var carouselImage = document.querySelectorAll(".slider-container img");
+var carouselImage = document.querySelectorAll(".slider-container .col");
 // );
 
 //get number of slides
