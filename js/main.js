@@ -26,7 +26,6 @@ window.addEventListener("click", (e) => {
 });
 
 function openModal(e) {
-  console.log(e);
   var qt = document.getElementById("qt");
   var st = document.getElementById("st");
   qt.innerText = e;
@@ -34,7 +33,6 @@ function openModal(e) {
   modal.style.display = "block";
 }
 
-//carousel
 //get carousel items |Array.form[es6]
 var carouselImage = document.querySelectorAll(".slider-container .col");
 // );
@@ -73,7 +71,6 @@ lii.forEach((e) => {
 });
 
 function check(curIndex) {
-  console.log("ff" + curIndex);
   if (curIndex <= 1) {
     prev.classList.add("disabled");
     next.classList.remove("disabled");
@@ -112,3 +109,93 @@ function nextcarousel() {
   }
   check(curIndex);
 }
+
+// Carousel
+checkScreenSize();
+var itemSelected;
+var itemC;
+var itemsCNumber;
+var current;
+nextC = document.getElementById("nextC");
+prevC = document.getElementById("prevC");
+nextC.addEventListener("click", nextCli);
+prevC.onclick = prevCli;
+var indicatorsC;
+var lisCreated;
+var divsli;
+function init(itemSelected) {
+  itemC = document.querySelectorAll(".itemC");
+  itemsCNumber = itemC.length;
+  current = 1;
+  indicatorsC = document.getElementById("indicatorsC");
+  lisCreated = itemsCNumber + 1 - itemSelected;
+  divsli = document.querySelectorAll(".indicatorC");
+  ubdated(lisCreated, itemSelected);
+  checkC(current, itemSelected);
+}
+function ubdated(lisCreated, itemSelected) {
+  while (indicatorsC.firstChild) {
+    indicatorsC.removeChild(indicatorsC.firstChild);
+  }
+  for (var i = 0; i < lisCreated; i++) {
+    var divIn = document.createElement("div");
+    divIn.classList.add("indicatorC");
+    indicatorsC.appendChild(divIn);
+  }
+  divsli = document.querySelectorAll(".indicatorC");
+  divsli.forEach((e, index) => {
+    e.addEventListener("click", () => {
+      current = index;
+      console.log(index);
+      checkC(current, itemSelected);
+    });
+  });
+}
+function checkC(current, itemSelected) {
+  if (current <= 0) {
+    prevC.classList.add("disabled");
+    nextC.classList.remove("disabled");
+  } else if (current >= lisCreated - 1) {
+    nextC.classList.add("disabled");
+    prevC.classList.remove("disabled");
+  } else {
+    nextC.classList.remove("disabled");
+    prevC.classList.remove("disabled");
+  }
+  divsli.forEach(function (l) {
+    l.classList.remove("active");
+  });
+  itemC.forEach(function (l) {
+    l.classList.remove("select");
+  });
+  divsli[current].classList.add("active");
+  for (var i = 0; i < itemSelected; i++) {
+    itemC[current++].classList.add("select");
+  }
+}
+function checkScreenSize() {
+  const tabletQuery = window.matchMedia(
+    "(min-width: 768px) and (max-width: 1024px)"
+  );
+  const largeQuery = window.matchMedia("(min-width: 1025px)");
+
+  if (tabletQuery.matches) {
+    itemSelected = 3;
+    init(itemSelected);
+  } else if (largeQuery.matches) {
+    itemSelected = 4;
+    init(itemSelected);
+  } else {
+    itemSelected = 2;
+    init(itemSelected);
+  }
+}
+function nextCli() {
+  current++;
+  checkC(current, itemSelected);
+}
+function prevCli() {
+  current--;
+  checkC(current, itemSelected);
+}
+window.addEventListener("resize", checkScreenSize);
