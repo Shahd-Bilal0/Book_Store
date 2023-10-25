@@ -180,13 +180,13 @@ function checkScreenSize() {
   const largeQuery = window.matchMedia("(min-width: 1025px)");
 
   if (tabletQuery.matches) {
-    itemSelected = 3;
+    itemSelected = 2;
     init(itemSelected);
   } else if (largeQuery.matches) {
-    itemSelected = 4;
+    itemSelected = 3;
     init(itemSelected);
   } else {
-    itemSelected = 2;
+    itemSelected = 1;
     init(itemSelected);
   }
 }
