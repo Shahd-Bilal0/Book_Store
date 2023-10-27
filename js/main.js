@@ -1,11 +1,13 @@
 // Start What we do
 let nums = document.querySelectorAll(".num");
 let section = document.querySelector(".services");
-let star = false;
+let star = true;
 window.onscroll = function () {
+  console.log("hi");
   if (window.scrollY >= section.offsetTop) {
-    if (!star) {
-      star = true;
+    console.log(section.offsetTop);
+    if (star) {
+      star = false;
       nums.forEach(function (el) {
         startCount(el);
       });

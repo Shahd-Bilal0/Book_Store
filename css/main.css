@@ -104,17 +104,8 @@ video {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
-  animation: count-up 3s linear;
-  -webkit-animation: count-up 3s linear;
 }
-@keyframes count-up {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 /* End   What we do Style */
 
 /* Start Features Style */
