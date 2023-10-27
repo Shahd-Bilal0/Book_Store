@@ -1,3 +1,28 @@
+// Start What we do
+let nums = document.querySelectorAll(".num");
+let section = document.querySelector(".services");
+let star = false;
+window.onscroll = function () {
+  if (window.scrollY >= section.offsetTop) {
+    if (!star) {
+      star = true;
+      nums.forEach(function (el) {
+        startCount(el);
+      });
+    }
+  }
+};
+function startCount(el) {
+  let goal = el.dataset.goal;
+  console.log(goal);
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 3000 / goal);
+}
+
 // MODAL
 let modal = document.querySelector(".modal");
 let closeBtn = document.getElementsByClassName("closeM")[0];
