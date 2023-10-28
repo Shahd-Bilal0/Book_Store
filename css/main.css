@@ -145,13 +145,6 @@ video {
 .features .col blockquote {
   display: none;
 }
-.features h3 {
-  text-align: center;
-  font-weight: 800;
-  margin: 0;
-  font-size: 40px;
-  color: var(--lightblue-color);
-}
 .slider-container .col.active {
   opacity: 1;
 }
@@ -225,7 +218,9 @@ video {
   background-color: var(--lightblue-color);
   color: #fff;
 }
-.modal {
+/* Modal */
+.modal,
+.modalB {
   display: none;
   position: fixed;
   left: 0;
@@ -236,8 +231,24 @@ video {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
 }
-
-.modalContent {
+.modalBodyB {
+  padding: 20px;
+}
+.modalBodyB h3 {
+  color: var(--lightblue-color);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.modalBodyB h3 p {
+  color: black;
+}
+#bd,
+#ba {
+  font-size: 16px;
+  margin-top: 0;
+}
+.modalContent,
+.modalContentB {
   position: relative;
   top: 50%;
   left: 50%;
@@ -252,25 +263,27 @@ video {
   -o-transform: translate(-50%, -50%);
 }
 
-.modalHeader {
+.modalHeader,
+.modalHeaderB {
   background: var(--lightblue-color);
   padding: 15px;
   color: #fff;
   font-size: 13px;
 }
 
-.modalBody {
+.modalBody,
+.modalBodyB {
   padding: 10px 20px;
   background: #fff;
 }
 
-.features .closeM {
+.closeM {
   float: right;
   font-size: 30px;
   color: #fff;
 }
 
-.features .closeM:hover {
+.closeM:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -308,13 +321,6 @@ video {
 }
 .carousel .container {
   margin: 10px auto;
-}
-.carousel .container h3 {
-  text-align: center;
-  font-weight: 800;
-  margin-bottom: 30px;
-  font-size: 40px;
-  color: var(--lightblue-color);
 }
 .carousel .container .all {
   /* background-color: aqua; */
@@ -401,7 +407,60 @@ video {
   background-color: var(--lightblue-color);
 }
 /* End Carousel */
-
+/* Start Books Table */
+.Book-table {
+  background-color: white;
+  padding: var(--section-padding) 0;
+}
+.Book-table .container {
+  margin: 10px auto;
+  text-align: center;
+}
+.Book-table .resp-table {
+  overflow-x: auto;
+}
+.Book-table table {
+  border-spacing: 0;
+  min-width: 100%;
+}
+.Book-table thead td {
+  background-color: #eee;
+  font-weight: bold;
+}
+.Book-table table td {
+  padding: 15px;
+}
+.Book-table tbody td {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.Book-table tbody tr td:nth-child(4) {
+  border-right: 1px solid #e3dff7;
+}
+.Book-table tbody tr:hover td {
+  background-color: #00438087;
+}
+.Ystar,
+.Gstar {
+  font-weight: bold;
+  font-size: 20px;
+}
+.Ystar {
+  color: var(--darkYellow);
+}
+.Gstar {
+  color: gray;
+}
+.Book-table tbody tr td:nth-child(5),
+.Book-table tbody tr td:nth-child(6) {
+  display: none;
+}
+/* End Books Table  */
 /* Start Contact Style */
 .contact {
   padding: 0 0;
@@ -506,7 +565,6 @@ textarea,
     padding: var(--section-padding) 0;
   }
   .contact .container {
-    padding: 80px;
     background-color: #eee;
     border-radius: 10px;
     -webkit-border-radius: 10px;

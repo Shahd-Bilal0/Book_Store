@@ -84,9 +84,32 @@
       clos.classList.toggle("activee");
     });
   });
-
+  // Start What we do
+  let nums = document.querySelectorAll(".num");
+  let section = document.querySelector(".services");
+  let star = true;
+  function startCount(el) {
+    let goal = el.dataset.goal;
+    console.log(goal);
+    let count = setInterval(() => {
+      el.textContent++;
+      if (el.textContent == goal) {
+        clearInterval(count);
+      }
+    }, 3000 / goal);
+  }
   let btn = document.querySelector("button");
+
   window.onscroll = function () {
+    if (window.scrollY >= section.offsetTop) {
+      if (star) {
+        star = false;
+        nums.forEach(function (el) {
+          startCount(el);
+        });
+      }
+    }
+
     if (window.scrollY >= 600) {
       btn.style.display = "block";
     } else {

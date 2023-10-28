@@ -1,33 +1,89 @@
-// Start What we do
-let nums = document.querySelectorAll(".num");
-let section = document.querySelector(".services");
-let star = true;
-window.onscroll = function () {
-  console.log("hi");
-  if (window.scrollY >= section.offsetTop) {
-    console.log(section.offsetTop);
-    if (star) {
-      star = false;
-      nums.forEach(function (el) {
-        startCount(el);
-      });
+// MODAL B
+let modalB = document.querySelector(".modalB");
+let rows = document.querySelectorAll(".Book-table .book-row");
+function openModalB(e) {
+  document.getElementById("bn").textContent =
+    e.querySelector("td:nth-child(1)").textContent;
+  document.getElementById("bd").textContent =
+    e.querySelector("td:nth-child(5)").textContent;
+  document.getElementById("ba").textContent =
+    e.querySelector("td:nth-child(6)").textContent;
+
+  modalB.style.display = "block";
+}
+fetchData();
+async function fetchData() {
+  try {
+    let myData = await fetch(
+      "https://www.googleapis.com/books/v1/volumes?q=story%20potter&ke=AIzaSyBYjac80Uj7KwHUMYCRkX7-GYlbb3HtCn8"
+    );
+    let jsData = await myData.json();
+    for (let i = 0; i < 10; i++) {
+      addRow(
+        jsData.items[i].volumeInfo.title,
+        jsData.items[i].volumeInfo.publishedDate,
+        "$24.99",
+        3,
+        jsData.items[i].volumeInfo.description,
+        jsData.items[i].volumeInfo.authors
+      );
     }
+  } catch (reason) {
+    console.log(`Reason: ${reason}`);
+  } finally {
+    console.log("After Fetch");
+    rows = document.querySelectorAll(".Book-table .book-row");
+    rows.forEach((e) => {
+      e.addEventListener("click", () => openModalB(e));
+    });
   }
-};
-function startCount(el) {
-  let goal = el.dataset.goal;
-  console.log(goal);
-  let count = setInterval(() => {
-    el.textContent++;
-    if (el.textContent == goal) {
-      clearInterval(count);
-    }
-  }, 3000 / goal);
+}
+function addRow(name, publishDate, price, rate, description, author) {
+  let tableBody = document.getElementsByTagName("tbody")[0];
+  let newRow = document.createElement("tr");
+  newRow.classList.add("book-row");
+
+  let nameCell = document.createElement("td");
+  let publishDateCell = document.createElement("td");
+  let priceCell = document.createElement("td");
+  let rateCell = document.createElement("td");
+  let descriptionCell = document.createElement("td");
+  let authorCell = document.createElement("td");
+
+  nameCell.textContent = name;
+  publishDateCell.textContent = publishDate;
+  priceCell.textContent = price;
+  descriptionCell.textContent = description;
+  authorCell.textContent = author;
+
+  let starsSpan = document.createElement("span");
+  starsSpan.classList.add("stars");
+  let yellowStars = rate;
+  let grayStars = 5 - rate;
+
+  let starHTML = "";
+  for (let i = 0; i < yellowStars; i++) {
+    starHTML += '<span class="Ystar">★</span>';
+  }
+  for (let i = 0; i < grayStars; i++) {
+    starHTML += '<span class="Gstar">★</span>';
+  }
+
+  starsSpan.innerHTML = starHTML;
+  rateCell.appendChild(starsSpan);
+
+  newRow.appendChild(nameCell);
+  newRow.appendChild(publishDateCell);
+  newRow.appendChild(priceCell);
+  newRow.appendChild(rateCell);
+  newRow.appendChild(descriptionCell);
+  newRow.appendChild(authorCell);
+  tableBody.appendChild(newRow);
 }
 
-// MODAL
+// MODAL C
 let modal = document.querySelector(".modal");
-let closeBtn = document.getElementsByClassName("closeM")[0];
+let closeBtn = document.querySelectorAll(".closeM");
 let quotes = document.querySelectorAll(".slider-container .col");
 
 quotes.forEach(function (e) {
@@ -42,13 +98,18 @@ quotes.forEach(function (e) {
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
+closeBtn.forEach((e) => {
+  e.addEventListener("click", () => {
+    console.log("h");
+    modal.style.display = "none";
+    modalB.style.display = "none";
+  });
 });
 
 window.addEventListener("click", (e) => {
-  if (e.target == modal) {
+  if (e.target == modal || e.target == modalB) {
     modal.style.display = "none";
+    modalB.style.display = "none";
   }
 });
 
@@ -60,10 +121,8 @@ function openModal(e) {
   modal.style.display = "block";
 }
 
-//get carousel items |Array.form[es6]
+//get carousel items
 var carouselImage = document.querySelectorAll(".slider-container .col");
-// );
-
 //get number of slides
 var carouselNumber = carouselImage.length;
 
