@@ -1,3 +1,13 @@
+//getDataFromApi
+let jsData;
+async function getData() {
+  let myData = await fetch(
+    "https://www.googleapis.com/books/v1/volumes?q=story%20potter&ke=AIzaSyBYjac80Uj7KwHUMYCRkX7-GYlbb3HtCn8"
+  );
+  jsData = await myData.json();
+  console.log(jsData);
+}
+
 //Pagination
 const itemsPerPage = 5;
 let currentPage = 1;
@@ -5,8 +15,7 @@ let bookslength = 13;
 const prevPage = document.querySelector(".pagination .prevPage");
 const nextPage = document.querySelector(".pagination .nextPage");
 let tableBody = document.getElementsByTagName("tbody")[0];
-updateTable();
-updatePagination();
+getData().then(updateTable).then(updatePagination);
 // MODAL B
 let modalB = document.querySelector(".modalB");
 let rows = document.querySelectorAll(".Book-table .book-row");
@@ -26,26 +35,16 @@ async function updateTable() {
   tableBody.innerHTML = ``;
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
-  try {
-    let myData = await fetch(
-      "https://www.googleapis.com/books/v1/volumes?q=story%20potter&ke=AIzaSyBYjac80Uj7KwHUMYCRkX7-GYlbb3HtCn8"
-    );
-    let jsData = await myData.json();
 
-    for (let i = start; i < end && i < bookslength; i++) {
-      addRow(
-        jsData.items[i % 10].volumeInfo.title,
-        jsData.items[i % 10].volumeInfo.publishedDate,
-        "$24.99",
-        arrS[i % 10],
-        jsData.items[i % 10].volumeInfo.description,
-        jsData.items[i % 10].volumeInfo.authors
-      );
-    }
-  } catch (reason) {
-    console.log(`Reason: ${reason}`);
-  } finally {
-    console.log("After Fetch");
+  for (let i = start; i < end && i < bookslength; i++) {
+    addRow(
+      jsData.items[i % 10].volumeInfo.title,
+      jsData.items[i % 10].volumeInfo.publishedDate,
+      "$24.99",
+      arrS[i % 10],
+      jsData.items[i % 10].volumeInfo.description,
+      jsData.items[i % 10].volumeInfo.authors
+    );
   }
 }
 
