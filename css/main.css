@@ -163,12 +163,15 @@ video {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
 }
-.slider-controls {
+.slider-controls,
+.pagination {
   display: flex;
   justify-content: space-between;
 }
 .slider-controls .prev,
-.slider-controls .next {
+.slider-controls .next,
+.pagination .prevPage,
+.pagination .nextPage {
   background-color: var(--lightblue-color);
   color: #fff;
   font-size: 16px;
@@ -187,11 +190,15 @@ video {
   width: 80%;
 }
 .slider-controls .prev.disabled,
-.slider-controls .next.disabled {
+.slider-controls .next.disabled,
+.pagination .prevPage.disabled,
+.pagination .nextPage.disabled {
   background-color: #0043807d;
   cursor: no-drop;
 }
-
+.pagination {
+  margin-top: 15px;
+}
 .slider-controls .indicators ul {
   padding: 0;
   list-style: none;
@@ -460,6 +467,7 @@ video {
 .Book-table tbody tr td:nth-child(6) {
   display: none;
 }
+
 /* End Books Table  */
 /* Start Contact Style */
 .contact {

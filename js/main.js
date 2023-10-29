@@ -1,6 +1,16 @@
+//Pagination
+const itemsPerPage = 5;
+let currentPage = 1;
+let bookslength = 13;
+const prevPage = document.querySelector(".pagination .prevPage");
+const nextPage = document.querySelector(".pagination .nextPage");
+let tableBody = document.getElementsByTagName("tbody")[0];
+updateTable();
+updatePagination();
 // MODAL B
 let modalB = document.querySelector(".modalB");
 let rows = document.querySelectorAll(".Book-table .book-row");
+let arrS = [1, 2, 3, 4, 5, 4, 3, 2, 1, 5];
 function openModalB(e) {
   document.getElementById("bn").textContent =
     e.querySelector("td:nth-child(1)").textContent;
@@ -11,35 +21,35 @@ function openModalB(e) {
 
   modalB.style.display = "block";
 }
-fetchData();
-async function fetchData() {
+
+async function updateTable() {
+  tableBody.innerHTML = ``;
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
   try {
     let myData = await fetch(
       "https://www.googleapis.com/books/v1/volumes?q=story%20potter&ke=AIzaSyBYjac80Uj7KwHUMYCRkX7-GYlbb3HtCn8"
     );
     let jsData = await myData.json();
-    for (let i = 0; i < 10; i++) {
+
+    for (let i = start; i < end && i < bookslength; i++) {
       addRow(
-        jsData.items[i].volumeInfo.title,
-        jsData.items[i].volumeInfo.publishedDate,
+        jsData.items[i % 10].volumeInfo.title,
+        jsData.items[i % 10].volumeInfo.publishedDate,
         "$24.99",
-        3,
-        jsData.items[i].volumeInfo.description,
-        jsData.items[i].volumeInfo.authors
+        arrS[i % 10],
+        jsData.items[i % 10].volumeInfo.description,
+        jsData.items[i % 10].volumeInfo.authors
       );
     }
   } catch (reason) {
     console.log(`Reason: ${reason}`);
   } finally {
     console.log("After Fetch");
-    rows = document.querySelectorAll(".Book-table .book-row");
-    rows.forEach((e) => {
-      e.addEventListener("click", () => openModalB(e));
-    });
   }
 }
+
 function addRow(name, publishDate, price, rate, description, author) {
-  let tableBody = document.getElementsByTagName("tbody")[0];
   let newRow = document.createElement("tr");
   newRow.classList.add("book-row");
 
@@ -78,9 +88,40 @@ function addRow(name, publishDate, price, rate, description, author) {
   newRow.appendChild(rateCell);
   newRow.appendChild(descriptionCell);
   newRow.appendChild(authorCell);
+  newRow.addEventListener("click", () => openModalB(newRow));
   tableBody.appendChild(newRow);
 }
 
+function updatePagination() {
+  if (currentPage === 1) {
+    prevPage.disabled;
+    prevPage.classList.add("disabled");
+  } else {
+    prevPage.classList.remove("disabled");
+  }
+  if (currentPage * itemsPerPage >= bookslength) {
+    nextPage.disable;
+    nextPage.classList.add("disabled");
+  } else {
+    nextPage.classList.remove("disabled");
+  }
+}
+
+prevPage.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    updateTable();
+    updatePagination();
+  }
+});
+
+nextPage.addEventListener("click", () => {
+  if (currentPage * itemsPerPage < bookslength) {
+    currentPage++;
+    updateTable();
+    updatePagination();
+  }
+});
 // MODAL C
 let modal = document.querySelector(".modal");
 let closeBtn = document.querySelectorAll(".closeM");
