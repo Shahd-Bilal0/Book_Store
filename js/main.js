@@ -324,4 +324,13 @@ function prevCli() {
   current--;
   checkC(current, itemSelected);
 }
+
+//scroller
+let el = document.querySelector(".scroller");
+let height =
+  document.documentElement.scrollHeight - document.documentElement.clientHeight;
 window.addEventListener("resize", checkScreenSize);
+window.addEventListener("scroll", () => {
+  let scrollT = document.documentElement.scrollTop;
+  el.style.width = `${(scrollT / height) * 100}%`;
+});

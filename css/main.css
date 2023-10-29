@@ -1,4 +1,13 @@
 @import "share.css";
+.scroller {
+  position: fixed;
+  background-color: var(--darkYellow);
+  top: 0;
+  left: 0;
+  /* width: 100px; */
+  height: 3px;
+  z-index: 100;
+}
 /* Start Hero Banner Style */
 .hero-banner {
   position: relative;
