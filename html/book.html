@@ -15,6 +15,7 @@
     <!--  -->
     <!-- Main Template CSS File -->
     <link rel="stylesheet" href="../css/share.css" />
+    <link rel="stylesheet" href="../css/book.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,13 +23,173 @@
   </head>
 
   <body>
+    <div class="scroller"></div>
+    <button class="up"><img src="../assets/images/up1.png" alt="" /></button>
     <!-- Start Header  -->
     <header></header>
     <!-- End   Header -->
 
+    <!-- Start Hero Banner  -->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <h1>New Adventure</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod temp or incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim.
+            </p>
+            <a href="#" class="btn"
+              >&nbsp;&nbsp; &nbsp;Buy Now &nbsp;&nbsp;&nbsp;
+            </a>
+          </div>
+          <div class="col-2">
+            <img class="image" src="../assets/images/header-img.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Banner  -->
+
+    <!-- Start product listing page -->
+    <section class="plp">
+      <div class="con">
+        <div class="container">
+          <div class="Breadcrumbs">
+            <a href="index.html">Home</a> <span> &nbsp;/&nbsp;</span>
+            <strong>Shop</strong>
+          </div>
+          <div class="site-top-icons">
+            <a href="#"><i class="fa fa-user"></i></a>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="site-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-1">
+              <div class="categories">
+                <h3>Categories</h3>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a class="cat" href="#"
+                      ><span>Adults</span> <span class="num">(2,220)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a class="cat active" href="#"
+                      ><span>Children</span> <span class="num">(2,220)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a class="cat" href="#"
+                      ><span>Older</span> <span class="num">(2,220)</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="filter">
+                <div class="fb">
+                  <h3>Filter by Price</h3>
+
+                  <div class="range-slider">
+                    <input
+                      type="range"
+                      class="min-price"
+                      value="100"
+                      min="10"
+                      max="500"
+                      step="10"
+                    />
+                    <input
+                      type="range"
+                      class="max-price"
+                      value="250"
+                      min="10"
+                      max="500"
+                      step="10"
+                    />
+                  </div>
+                  <div class="price-content">
+                    <p id="min-value">$50</p>
+                    <p id="max-value">$500</p>
+                  </div>
+                </div>
+                <div class="bcat">
+                  <h3>books by type</h3>
+                  <label for="sf">
+                    <input type="checkbox" id="sf" />
+                    <span>Sci-Fi (2,319)</span>
+                  </label>
+                  <label for="fan">
+                    <input type="checkbox" id="fan" />
+                    <span>Fantasy (1,282)</span>
+                  </label>
+                  <label for="act">
+                    <input type="checkbox" id="act" />
+                    <span>Action (1,392)</span>
+                  </label>
+                  <label for="cri">
+                    <input type="checkbox" id="cri" />
+                    <span>Crime (1,392)</span>
+                  </label>
+                  <label for="rom">
+                    <input type="checkbox" id="rom" />
+                    <span>Romance (1,392)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="sort-menu">
+                <h2>Shop All</h2>
+                <div class="btn">
+                  <button class="dropdown" id="reference">
+                    Reference &or;
+                  </button>
+                  <div class="content" aria-labelledby="reference">
+                    <a href="#" class="item">Name, A to Z</a>
+                    <a href="#" class="item">Name, Z to A</a>
+                    <div class="divider"></div>
+                    <a href="#" class="item">Price, low to high</a>
+                    <a href="#" class="item">Price, high to low</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products">
+                <div class="card">
+                  <img decoding="async" src="../assets/kids/3.jpg" alt="" />
+                  <div class="content">
+                    <h6>the LEAF THIEF</h6>
+                    <div class="pri">
+                      <h6>$12</h6>
+                      <h6><del>$20</del></h6>
+                    </div>
+                  </div>
+                  <div class="info">
+                    <a href="" class="btn"><i class="icon fas fa-heart"></i></a>
+
+                    <a href="" class="btn"
+                      ><i class="icon fas fa-shopping-cart"></i
+                    ></a>
+                    <a href="" class="btn"><i class="icon fas fa-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="pagination-pages"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End product listing page -->
+
     <!-- Start Fotter -->
     <footer></footer>
     <!-- End   Footer -->
-    <script></script>
+    <script src="../js/book.js"></script>
   </body>
 </html>

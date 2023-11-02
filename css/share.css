@@ -19,6 +19,15 @@
 body {
   font-family: "Inter", sans-serif;
 }
+.scroller {
+  position: fixed;
+  background-color: var(--darkYellow);
+  top: 0;
+  left: 0;
+  /* width: 100px; */
+  height: 3px;
+  z-index: 100;
+}
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -80,7 +89,7 @@ nav ul {
   position: absolute;
   top: 130px;
   left: 0;
-  margin: 0;
+  margin: 10px 0;
   height: calc(100vh);
   width: 100%;
   list-style: none;
@@ -238,7 +247,7 @@ footer .copyright span {
 /* Tablet (768px - 1024px) */
 @media screen and (min-width: 768px) {
   .container {
-    width: 750px;
+    max-width: 750px;
   }
   nav .icons {
     display: none;
@@ -272,7 +281,7 @@ footer .copyright span {
   .menu li a:hover,
   .menu li a.active {
     color: var(--darkblue-color);
-    border-bottom: 1px solid #cac423 !important;
+    border-bottom: 1px solid #cac423;
     padding-left: 15px;
   }
 }

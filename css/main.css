@@ -1,13 +1,10 @@
 @import "share.css";
-.scroller {
-  position: fixed;
-  background-color: var(--darkYellow);
-  top: 0;
-  left: 0;
-  /* width: 100px; */
-  height: 3px;
-  z-index: 100;
+.menu :nth-child(1) a {
+  color: var(--darkblue-color);
+  border-bottom: 1px solid #cac423;
+  padding-left: 15px;
 }
+
 /* Start Hero Banner Style */
 .hero-banner {
   position: relative;
@@ -125,7 +122,6 @@ video {
 .slider-container {
   background-color: #009688;
   margin: 10px auto;
-  /* width: 400px; */
   height: 350px;
   position: relative;
 }
