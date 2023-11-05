@@ -222,7 +222,10 @@ p {
 .col-2 .sort-menu .content a:hover {
   background-color: #f2f2f2;
 }
-
+.col-2 .sort-menu .content a.item.active {
+  background-color: rgb(137, 192, 196);
+  color: white;
+}
 .col-2 .sort-menu .divider {
   border-top: 1px solid #ccc;
   margin: 0.25rem 0;
@@ -235,7 +238,6 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-
   padding-bottom: 1rem;
 }
 .col-2 .products .card {

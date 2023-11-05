@@ -22,60 +22,7 @@ btn.onclick = function () {
     behavior: "smooth",
   });
 };
-
-// Loop through the products array and create cards
-// products.forEach((product) => {
-//   let card = document.createElement("div");
-//   card.classList.add("card");
-//   card.classList.add("disabled");
-//   card.innerHTML = `
-//       <img width="210px" height="280px" decoding="async" src="${product.imageUrl}" alt="" />
-//       <div class="content">
-//         <h6>${product.title}</h6>
-//         <div class="pri">
-//           <h6>$${product.price}</h6>
-//           <h6><del>$${product.discountPrice}</del></h6>
-//         </div>
-//       </div>
-//       <div class="info">
-//         <a href="" class="btn"><i class="icon fas fa-heart"></i></a>
-//         <a href="" class="btn"><i class="icon fas fa-shopping-cart"></i></a>
-//         <a href="" class="btn"><i class="icon fas fa-eye"></i></a>
-//       </div>
-//     `;
-
-//   productsD.appendChild(card);
-// });
-//pagination
-// let pagination = document.querySelector(".pagination");
-// let cardD = document.querySelectorAll(".products .card");
-
-// const cardsPerPage = 20;
-// const totalCards = products.length * 12; //12*12
-
-// 144/20 =7.2 || 8 total
-// const totalPages = Math.ceil(totalCards / cardsPerPage);
-// console.log(totalPages);
-// let ulP = document.querySelector(".pagination .second-ul");
-// for (var i = 0; i < totalPages; i++) {
-//   var liElement = document.createElement("li");
-//   if (i == 0) liElement.classList = "active";
-//   liElement.setAttribute("data-index", `${i + 1}`);
-//   liElement.appendChild(document.createTextNode(`${i + 1}`));
-//   ulP.appendChild(liElement);
-// }
-// updateData(0, cardsPerPage);
-// Display the cards for the selected page
-// function updateData(st, end) {
-//   for (let i = st; i < end; i++) {
-//     console.log(productsD.children[i]);
-//     // productsD.children[i].classList.remove("disabled");
-//   }
-// }
-
-//Pagination
-//get Data
-const products = [
+let products = [
   {
     title: "Whats Wrong with a pet Dinosaur",
     price: 7,
@@ -119,13 +66,13 @@ const products = [
     imageUrl: "../assets/kids/7.jpg",
   },
   {
-    title: "8 Little Planets",
+    title: "Little Planets",
     price: 12,
     discountPrice: 20,
     imageUrl: "../assets/kids/8.jpg",
   },
   {
-    title: "5,000 Awesome Facts",
+    title: "Awesome Facts",
     price: 15,
     discountPrice: 25,
     imageUrl: "../assets/kids/9.jpg",
@@ -150,14 +97,13 @@ const products = [
   },
 ];
 
-const itemsPerPage = 20;
+const itemsPerPage = 6;
 let currentPage = 1;
-let productslength = products.length * 12;
+let productslength = products.length;
 const prevPage = document.querySelector(".pagination .main-ul .prevPP");
 const nextPage = document.querySelector(".pagination .main-ul .nextPP");
 let productsD = document.querySelector(".products");
 
-// 144/20 =7.2 || 8 total
 const totalPages = Math.ceil(productslength / itemsPerPage);
 console.log(totalPages);
 let ulP = document.querySelector(".pagination .second-ul");
@@ -190,10 +136,10 @@ function updatePoduct() {
 
   for (let i = start; i < end && i < productslength; i++) {
     addCard(
-      products[i % 12].imageUrl,
-      products[i % 12].title,
-      products[i % 12].price,
-      products[i % 12].discountPrice
+      products[i].imageUrl,
+      products[i].title,
+      products[i].price,
+      products[i].discountPrice
     );
   }
 }
@@ -253,3 +199,62 @@ nextPage.addEventListener("click", () => {
     updatePagination();
   }
 });
+//SORT BY
+let x = 1;
+let items = document.querySelectorAll(".item");
+
+items.forEach((e, index) => {
+  e.addEventListener("click", () => {
+    console.log(index);
+    x = index + 1;
+
+    items.forEach(function (l) {
+      l.classList.remove("active");
+    });
+    e.classList.add("active");
+
+    sortData(x);
+  });
+});
+
+function sortData(x) {
+  switch (x) {
+    case 1:
+      products.sort(compareByNameAscending);
+      break;
+    case 2:
+      products.sort(compareByNameDescending);
+      break;
+    case 3:
+      products.sort(compareByPriceAscending);
+      break;
+    case 4:
+      products.sort(compareByPriceDescending);
+      break;
+    default:
+  }
+  updatePoduct();
+  updatePagination();
+}
+function compareByNameAscending(a, b) {
+  const titleA = a.title.toUpperCase();
+  const titleB = b.title.toUpperCase();
+
+  if (titleA < titleB) {
+    return -1;
+  }
+  if (titleA > titleB) {
+    return 1;
+  }
+  return 0;
+}
+function compareByNameDescending(a, b) {
+  return compareByNameAscending(b, a);
+}
+
+function compareByPriceAscending(a, b) {
+  return a.price - b.price;
+}
+function compareByPriceDescending(a, b) {
+  return b.price - a.price;
+}
