@@ -247,6 +247,7 @@ p {
   flex-direction: column;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125);
+  position: relative;
 }
 .col-2 .products .card:hover {
   transform: translateY(-10px);
@@ -264,14 +265,22 @@ p {
   text-align: center;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+  height: 180px;
 }
 .products .card .content h6 {
   font-size: 16px;
-  margin: 10px 0;
+  margin: 10px;
+  height: 70px;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
 }
 .products .card .content .pri {
   display: flex;
   justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 8px;
 }
 .products .card .content .pri del {
   color: #999;
@@ -285,6 +294,9 @@ p {
   justify-content: center;
   border: 1px solid #edf1ff;
   padding: 0.75rem 1.25rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .col-2 .products .card .info .btn {
@@ -301,6 +313,40 @@ p {
 }
 
 /* End product listing page */
+/* Start pagination */
+ul {
+  list-style: none;
+  padding: 0;
+  display: block;
+  display: flex;
+}
+.col-2 .pagination .main-ul {
+  display: flex;
+  justify-content: center;
+}
+.col-2 .pagination .main-ul li {
+  color: var(--darkblue-color);
+  display: block;
+  cursor: pointer;
+
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+.pagination li.prevPP.disabled,
+.pagination li.nextPP.disabled {
+  color: #222;
+  pointer-events: none;
+}
+.pagination .second-ul li.active {
+  color: #fff;
+  background-color: var(--darkblue-color);
+  border-color: var(--darkblue-color);
+}
+/*End pagination */
 /* Tablet (768px - 1024px) */
 @media screen and (min-width: 768px) {
   .container {

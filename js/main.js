@@ -31,7 +31,7 @@ function openModalB(e) {
   modalB.style.display = "block";
 }
 
-async function updateTable() {
+function updateTable() {
   tableBody.innerHTML = ``;
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
