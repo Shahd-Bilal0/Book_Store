@@ -25,8 +25,8 @@ btn.onclick = function () {
 let products = [
   {
     title: "Whats Wrong with a pet Dinosaur",
-    price: 7,
-    discountPrice: 20,
+    price: 17,
+    discountPrice: 25,
     imageUrl: "../assets/kids/1.jpg",
   },
   {
@@ -79,7 +79,7 @@ let products = [
   },
   {
     title: "How to Catch a Mermaid",
-    price: 7,
+    price: 13,
     discountPrice: 20,
     imageUrl: "../assets/kids/10.jpg",
   },
@@ -95,46 +95,78 @@ let products = [
     discountPrice: 20,
     imageUrl: "../assets/kids/12.jpg",
   },
+  {
+    title: "The Seeking Tree",
+    price: 13,
+    discountPrice: 20,
+    imageUrl: "../assets/kids/13.jpg",
+  },
+  {
+    title: "Everything Kids' Science Experiments",
+    price: 30,
+    discountPrice: 40,
+    imageUrl: "../assets/kids/14.jpg",
+  },
+  {
+    title: "The Not So Special Fish",
+    price: 8,
+    discountPrice: 10,
+    imageUrl: "../assets/kids/15.jpg",
+  },
+  {
+    title: "The Wonderful Things You Will Be Hardcover",
+    price: 16,
+    discountPrice: 20,
+    imageUrl: "../assets/kids/16.jpg",
+  },
+  {
+    title: "How to Catch the Easter Bunny",
+    price: 15,
+    discountPrice: 20,
+    imageUrl: "../assets/kids/17.jpg",
+  },
+  {
+    title: "My Magical Choices",
+    price: 11,
+    discountPrice: 20,
+    imageUrl: "../assets/kids/18.jpg",
+  },
+  {
+    title: "The Scarecrow",
+    price: 10,
+    discountPrice: 20,
+    imageUrl: "../assets/kids/19.jpg",
+  },
+  {
+    title: "Leaf Man",
+    price: 19,
+    discountPrice: 25,
+    imageUrl: "../assets/kids/20.jpg",
+  },
+  {
+    title: "What's In The Forest?",
+    price: 8,
+    discountPrice: 25,
+    imageUrl: "../assets/kids/21.jpg",
+  },
 ];
-
+let cp = [...products].sort(compareByPriceAscending);
 const itemsPerPage = 6;
 let currentPage = 1;
-let productslength = products.length;
 const prevPage = document.querySelector(".pagination .main-ul .prevPP");
 const nextPage = document.querySelector(".pagination .main-ul .nextPP");
 let productsD = document.querySelector(".products");
 
-const totalPages = Math.ceil(productslength / itemsPerPage);
-console.log(totalPages);
-let ulP = document.querySelector(".pagination .second-ul");
-for (var i = 0; i < totalPages; i++) {
-  var liElement = document.createElement("li");
-  liElement.classList.add("main-li");
-  liElement.setAttribute("data-index", `${i + 1}`);
-  liElement.appendChild(document.createTextNode(`${i + 1}`));
-  ulP.appendChild(liElement);
-}
-let lii = document.querySelectorAll(".main-li");
-
-lii.forEach((e, index) => {
-  e.addEventListener("click", () => {
-    lii.forEach(function (l) {
-      l.classList.remove("active");
-    });
-    e.classList.add("active");
-    currentPage = lii[index].getAttribute("data-index");
-    updatePoduct();
-    updatePagination();
-  });
-});
 updatePoduct();
 updatePagination();
+filterProd(cp, 5, 20);
 function updatePoduct() {
+  console.log("current =", currentPage);
   productsD.innerHTML = ``;
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
 
-  for (let i = start; i < end && i < productslength; i++) {
+  for (let i = start; i < end && i < products.length; i++) {
     addCard(
       products[i].imageUrl,
       products[i].title,
@@ -148,7 +180,7 @@ function addCard(imageUrl, title, price, discountPrice) {
   let newCard = document.createElement("div");
   newCard.classList.add("card");
   newCard.innerHTML = `
-          <img width="210px" height="280px" decoding="async" src="${imageUrl}" alt="" />
+          <img width="210px"  decoding="async" src="${imageUrl}" alt="" />
           <div class="content">
             <h6>${title}</h6>
             <div class="pri">
@@ -166,18 +198,42 @@ function addCard(imageUrl, title, price, discountPrice) {
 }
 
 function updatePagination() {
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+  console.log("totalPages", totalPages);
+  let ulP = document.querySelector(".pagination .second-ul");
+  ulP.innerHTML = ``;
+  for (var i = 0; i < totalPages; i++) {
+    var liElement = document.createElement("li");
+    liElement.classList.add("main-li");
+    liElement.setAttribute("data-index", `${i + 1}`);
+    liElement.appendChild(document.createTextNode(`${i + 1}`));
+    ulP.appendChild(liElement);
+  }
+  let lii = document.querySelectorAll(".main-li");
+
+  lii.forEach((e, index) => {
+    e.addEventListener("click", () => {
+      lii.forEach(function (l) {
+        l.classList.remove("active");
+      });
+      e.classList.add("active");
+      currentPage = lii[index].getAttribute("data-index");
+      updatePoduct();
+      updatePagination();
+    });
+  });
   lii.forEach(function (l) {
     l.classList.remove("active");
   });
 
-  lii[currentPage - 1].classList.add("active");
+  if (lii.length >= 1) lii[currentPage - 1].classList.add("active");
   if (currentPage === 1) {
     prevPage.disabled;
     prevPage.classList.add("disabled");
   } else {
     prevPage.classList.remove("disabled");
   }
-  if (currentPage * itemsPerPage >= productslength) {
+  if (currentPage * itemsPerPage >= products.length) {
     nextPage.disable;
     nextPage.classList.add("disabled");
   } else {
@@ -193,7 +249,7 @@ prevPage.addEventListener("click", () => {
 });
 
 nextPage.addEventListener("click", () => {
-  if (currentPage * itemsPerPage < productslength) {
+  if (currentPage * itemsPerPage < products.length) {
     currentPage++;
     updatePoduct();
     updatePagination();
@@ -205,7 +261,6 @@ let items = document.querySelectorAll(".item");
 
 items.forEach((e, index) => {
   e.addEventListener("click", () => {
-    console.log(index);
     x = index + 1;
 
     items.forEach(function (l) {
@@ -258,3 +313,51 @@ function compareByPriceAscending(a, b) {
 function compareByPriceDescending(a, b) {
   return b.price - a.price;
 }
+//
+let minValue = document.getElementById("min-value");
+let maxValue = document.getElementById("max-value");
+const inputElements = document.querySelectorAll(".range-slider input");
+
+validateRange(
+  parseInt(inputElements[0].value),
+  parseInt(inputElements[1].value)
+);
+
+function validateRange(minPrice, maxPrice) {
+  if (minPrice > maxPrice) {
+    let tempValue = maxPrice;
+    maxPrice = minPrice;
+    minPrice = tempValue;
+  }
+  minValue.innerHTML = "$" + minPrice;
+  maxValue.innerHTML = "$" + maxPrice;
+  const filteredResult = filterProd(cp, minPrice, maxPrice);
+  products = filteredResult.products;
+  products.length = filteredResult.countInRange;
+  updatePagination();
+  updatePoduct();
+}
+function filterProd(cp, minPrice, maxPrice) {
+  const filteredProducts = cp.filter(
+    (cp) => cp.price >= minPrice && cp.price <= maxPrice
+  );
+  const otherProducts = products.filter(
+    (product) => product.price < minPrice || product.price > maxPrice
+  );
+
+  const countInRange = filteredProducts.length;
+  const result = filteredProducts.concat(otherProducts);
+  return {
+    products: result,
+    countInRange: countInRange,
+  };
+}
+
+inputElements.forEach((element) => {
+  element.addEventListener("change", () => {
+    currentPage = 1;
+    let minPrice = parseInt(inputElements[0].value);
+    let maxPrice = parseInt(inputElements[1].value);
+    validateRange(minPrice, maxPrice);
+  });
+});
