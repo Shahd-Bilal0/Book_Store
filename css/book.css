@@ -168,6 +168,10 @@ p {
   margin-bottom: 0.25rem;
   margin-left: 0.25rem;
 }
+.plp .filter .bcat span {
+  color: var(--darkblue-color);
+  font-weight: 400;
+}
 .plp .filter .bcat .checkbox:checked ~ span {
   color: var(--darkYellow);
   font-size: large;
