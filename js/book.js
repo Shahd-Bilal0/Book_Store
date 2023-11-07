@@ -339,7 +339,7 @@ let MainProducts = [
     categories: "older",
   },
 ];
-displayProduct(MainProducts);
+
 function displayProduct(products) {
   let cp = [...products].sort(compareByPriceAscending);
   const itemsPerPage = 9;
@@ -549,15 +549,17 @@ function compareByPriceDescending(a, b) {
 let categories = document.querySelectorAll(".categories .cat");
 let tit = document.querySelector(".col-2 .sort-menu .categ");
 let main_cat = document.querySelector(".col-2 .sort-menu .main-cat");
+let main_cat_nums = document.querySelector(".col-2 .sort-menu .main-cat .num");
 
 categories.forEach((e, index) => {
+  categorProd(0, index, e.children[0].innerHTML);
   e.addEventListener("click", () => {
     categories.forEach((l) => {
       l.classList.remove("active");
     });
     tit.innerHTML = e.children[0].innerHTML;
     e.classList.add("active");
-    categorProd(index + 1);
+    categorProd(0, index, e.children[0].innerHTML);
   });
 });
 main_cat.addEventListener("click", (e) => {
@@ -565,27 +567,26 @@ main_cat.addEventListener("click", (e) => {
   categories.forEach((l) => {
     l.classList.remove("active");
   });
-  categorProd(4);
+  categorProd(1);
 });
-function categorProd(y) {
+
+function categorProd(x, y, s) {
   let temp;
-  switch (y) {
+  switch (x) {
+    case 0:
+      console.log(s);
+      temp = MainProducts.filter(
+        (p) => p.categories.toLowerCase() === s.toLowerCase()
+      );
+      console.log(temp);
+      categories[y].children[1].innerHTML = `(${temp.length})`;
+      break;
     case 1:
-      temp = MainProducts.filter((p) => p.categories === "Adults");
-      break;
-    case 2:
-      temp = MainProducts.filter((p) => p.categories === "children");
-      console.log(temp);
-      break;
-    case 3:
-      temp = MainProducts.filter((p) => p.categories === "older");
-      console.log(temp);
-      break;
-    case 4:
       temp = [...MainProducts];
-      console.log(temp);
+      tit.innerHTML = `All  (${temp.length})`;
       break;
     default:
   }
   displayProduct(temp);
 }
+categorProd(1);
