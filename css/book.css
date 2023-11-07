@@ -166,11 +166,18 @@ p {
   display: flex;
   align-items: center;
   margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
+}
+.plp .filter .bcat .checkbox:checked ~ span {
+  color: var(--darkYellow);
+  font-size: large;
 }
 .plp .filter .bcat input {
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
 }
-
+.plp .filter .bcat .num {
+  margin-left: 0.5rem;
+}
 .plp .site-section .row .col-2 .sort-menu {
   margin-bottom: 3rem;
   display: flex;
