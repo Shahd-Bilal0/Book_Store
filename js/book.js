@@ -22,6 +22,7 @@ btn.onclick = function () {
     behavior: "smooth",
   });
 };
+let temp;
 let MainProducts = [
   {
     title: "Whats Wrong with a pet Dinosaur",
@@ -29,6 +30,7 @@ let MainProducts = [
     discountPrice: 25,
     imageUrl: "../assets/children/1.jpg",
     categories: "children",
+    type: "Sci-Fi",
   },
   {
     title: "Silly Jokes",
@@ -36,6 +38,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/2.jpg",
     categories: "children",
+    type: "Fantasy",
   },
   {
     title: "the LEAF THIEF",
@@ -43,6 +46,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/3.jpg",
     categories: "children",
+    type: "Action",
   },
   {
     title: "LITTLE HOUSE AND FRIENDS",
@@ -50,6 +54,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/4.jpg",
     categories: "children",
+    type: "Crime",
   },
   {
     title: "My First Book of Planets",
@@ -57,6 +62,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/5.jpg",
     categories: "children",
+    type: "Romance",
   },
   {
     title: "The 50 States",
@@ -64,6 +70,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/6.jpg",
     categories: "children",
+    type: "Sci-Fi",
   },
   {
     title: "Why a Son Needs a Dad",
@@ -71,6 +78,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/7.jpg",
     categories: "children",
+    type: "Fantasy",
   },
   {
     title: "Little Planets",
@@ -78,6 +86,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/8.jpg",
     categories: "children",
+    type: "Action",
   },
   {
     title: "Awesome Facts",
@@ -85,6 +94,7 @@ let MainProducts = [
     discountPrice: 25,
     imageUrl: "../assets/children/9.jpg",
     categories: "children",
+    type: "Crime",
   },
   {
     title: "How to Catch a Mermaid",
@@ -92,6 +102,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/10.jpg",
     categories: "children",
+    type: "Romance",
   },
   {
     title: "If Animals Kissed Good Night",
@@ -99,6 +110,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/11.jpg",
     categories: "children",
+    type: "Sci-Fi",
   },
   {
     title: "Why a Son Needs a Mom",
@@ -106,6 +118,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/12.jpg",
     categories: "children",
+    type: "Fantasy",
   },
   {
     title: "The Seeking Tree",
@@ -113,6 +126,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/13.jpg",
     categories: "children",
+    type: "Action",
   },
   {
     title: "Everything children' Science Experiments",
@@ -120,6 +134,7 @@ let MainProducts = [
     discountPrice: 40,
     imageUrl: "../assets/children/14.jpg",
     categories: "children",
+    type: "Crime",
   },
   {
     title: "The Not So Special Fish",
@@ -127,6 +142,7 @@ let MainProducts = [
     discountPrice: 10,
     imageUrl: "../assets/children/15.jpg",
     categories: "children",
+    type: "Romance",
   },
   {
     title: "The Wonderful Things You Will Be Hardcover",
@@ -134,6 +150,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/16.jpg",
     categories: "children",
+    type: "Sci-Fi",
   },
   {
     title: "How to Catch the Easter Bunny",
@@ -141,6 +158,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/17.jpg",
     categories: "children",
+    type: "Fantasy",
   },
   {
     title: "My Magical Choices",
@@ -148,6 +166,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/18.jpg",
     categories: "children",
+    type: "Action",
   },
   {
     title: "The Scarecrow",
@@ -155,6 +174,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/children/19.jpg",
     categories: "children",
+    type: "Crime",
   },
   {
     title: "Leaf Man",
@@ -162,6 +182,7 @@ let MainProducts = [
     discountPrice: 25,
     imageUrl: "../assets/children/20.jpg",
     categories: "children",
+    type: "Romance",
   },
   {
     title: "What's In The Forest?",
@@ -169,6 +190,7 @@ let MainProducts = [
     discountPrice: 25,
     imageUrl: "../assets/children/21.jpg",
     categories: "children",
+    type: "Sci-Fi",
   },
   {
     title: "Harry Potter Coloring Book",
@@ -176,6 +198,7 @@ let MainProducts = [
     discountPrice: 25,
     imageUrl: "../assets/Adults/1.jpg",
     categories: "Adults",
+    type: "Fantasy",
   },
   {
     title: "Harry Potter Magical Places",
@@ -183,6 +206,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/2.jpg",
     categories: "Adults",
+    type: "Sci-Fi",
   },
   {
     title: "Harry Potter Origami Volume",
@@ -190,6 +214,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/3.jpg",
     categories: "Adults",
+    type: "Fantasy",
   },
   {
     title: "Relaxing Flowers",
@@ -197,6 +222,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/4.jpg",
     categories: "Adults",
+    type: "Romance",
   },
   {
     title: "Catching Fire",
@@ -204,6 +230,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/5.jpg",
     categories: "Adults",
+    type: "Action",
   },
   {
     title: "The Ballad of Songbirds and Snakes",
@@ -211,6 +238,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/6.jpg",
     categories: "Adults",
+    type: "Fantasy",
   },
   {
     title: "Vintage Christmas Village",
@@ -218,6 +246,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/7.jpg",
     categories: "Adults",
+    type: "Romance",
   },
   {
     title: "Unbroken",
@@ -225,6 +254,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/8.jpg",
     categories: "Adults",
+    type: "Action",
   },
   {
     title: "Vintage Cars and Trucks",
@@ -232,6 +262,7 @@ let MainProducts = [
     discountPrice: 25,
     imageUrl: "../assets/Adults/9.jpg",
     categories: "Adults",
+    type: "Crime",
   },
   {
     title: "The Silent Wife",
@@ -239,6 +270,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/10.jpg",
     categories: "Adults",
+    type: "Romance",
   },
   {
     title: "It Ends with Us",
@@ -246,6 +278,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/11.jpg",
     categories: "Adults",
+    type: "Fantasy",
   },
   {
     title: "Maybe Someday",
@@ -253,6 +286,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/Adults/12.jpg",
     categories: "Adults",
+    type: "Sci-Fi",
   },
   {
     title: "Some Kind of Comfort",
@@ -260,6 +294,7 @@ let MainProducts = [
     discountPrice: 25,
     imageUrl: "../assets/older/1.jpg",
     categories: "older",
+    type: "Fantasy",
   },
   {
     title: "TimeOuts Titanic",
@@ -267,6 +302,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/2.jpg",
     categories: "older",
+    type: "Sci-Fi",
   },
   {
     title: "The Way I Used to Be Paperback",
@@ -274,6 +310,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/3.jpg",
     categories: "older",
+    type: "Fantasy",
   },
   {
     title: "The Prison Healer",
@@ -281,6 +318,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/4.jpg",
     categories: "older",
+    type: "Romance",
   },
   {
     title: "Once Upon a Dream",
@@ -288,6 +326,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/5.jpg",
     categories: "older",
+    type: "Action",
   },
   {
     title: "LORE",
@@ -295,6 +334,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/6.jpg",
     categories: "older",
+    type: "Fantasy",
   },
   {
     title: "How I Magically Messed Up My Life",
@@ -302,6 +342,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/7.jpg",
     categories: "older",
+    type: "Romance",
   },
   {
     title: "The Girl in the Castlek",
@@ -309,6 +350,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/8.jpg",
     categories: "older",
+    type: "Action",
   },
   {
     title: "Stephen king",
@@ -316,6 +358,7 @@ let MainProducts = [
     discountPrice: 25,
     imageUrl: "../assets/older/9.jpg",
     categories: "older",
+    type: "Crime",
   },
   {
     title: "The Island Paperback",
@@ -323,6 +366,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/10.jpg",
     categories: "older",
+    type: "Romance",
   },
   {
     title: "Hatchet Paperback",
@@ -330,6 +374,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/11.jpg",
     categories: "older",
+    type: "Fantasy",
   },
   {
     title: "47 Days",
@@ -337,6 +382,7 @@ let MainProducts = [
     discountPrice: 20,
     imageUrl: "../assets/older/12.jpg",
     categories: "older",
+    type: "Sci-Fi",
   },
 ];
 
@@ -350,8 +396,10 @@ function displayProduct(products) {
   let minValue = document.getElementById("min-value");
   let maxValue = document.getElementById("max-value");
   const inputElements = document.querySelectorAll(".range-slider input");
+
   updatePoduct();
   updatePagination();
+
   //FILTER BY PRICE
   validateRange(
     parseInt(inputElements[0].value),
@@ -549,11 +597,16 @@ function compareByPriceDescending(a, b) {
 let categories = document.querySelectorAll(".categories .cat");
 let tit = document.querySelector(".col-2 .sort-menu .categ");
 let main_cat = document.querySelector(".col-2 .sort-menu .main-cat");
-let main_cat_nums = document.querySelector(".col-2 .sort-menu .main-cat .num");
-
+//
+const checkboxes = document.querySelectorAll(".checkbox");
+const checkboxeslab = document.querySelectorAll("label .lab");
+let type_nums = document.querySelectorAll(".bcat .num");
 categories.forEach((e, index) => {
   categorProd(0, index, e.children[0].innerHTML);
   e.addEventListener("click", () => {
+    checkboxes.forEach((e) => {
+      e.checked = false;
+    });
     categories.forEach((l) => {
       l.classList.remove("active");
     });
@@ -571,14 +624,12 @@ main_cat.addEventListener("click", (e) => {
 });
 
 function categorProd(x, y, s) {
-  let temp;
   switch (x) {
     case 0:
-      console.log(s);
       temp = MainProducts.filter(
         (p) => p.categories.toLowerCase() === s.toLowerCase()
       );
-      console.log(temp);
+
       categories[y].children[1].innerHTML = `(${temp.length})`;
       break;
     case 1:
@@ -587,6 +638,39 @@ function categorProd(x, y, s) {
       break;
     default:
   }
+  numsT();
   displayProduct(temp);
 }
 categorProd(1);
+//BOOKS BY TYPE
+function numsT() {
+  console.log(temp);
+  checkboxeslab.forEach((e, index) => {
+    let tt;
+    tt = temp.filter((p) => p.type == e.textContent.trim());
+
+    type_nums[index].innerHTML = ` (${tt.length})`;
+  });
+}
+
+checkboxes.forEach((e) => {
+  e.addEventListener("change", updateSelectedChoices);
+});
+
+function updateSelectedChoices() {
+  let selectedChoices = [];
+  checkboxes.forEach((e, index) => {
+    if (e.checked) {
+      selectedChoices.push(checkboxeslab[index].textContent.trim());
+    }
+  });
+  console.log(selectedChoices);
+
+  const filteredProducts = temp.filter((p) => {
+    return selectedChoices.includes(p.type);
+  });
+  console.log(filteredProducts);
+
+  if (selectedChoices.length == 0) displayProduct(temp);
+  else displayProduct(filteredProducts);
+}
