@@ -71,21 +71,21 @@
         <div class="container">
           <div class="row">
             <div class="col-1">
-              <div class="categories">
+              <div class="categories" id="categories">
                 <h3>Categories</h3>
                 <ul>
                   <li>
-                    <a class="cat" href="#"
+                    <a class="cat" href="#categories"
                       ><span>Adults</span> <span class="num">(2,220)</span></a
                     >
                   </li>
                   <li>
-                    <a class="cat active" href="#"
+                    <a class="cat" href="#categories"
                       ><span>Children</span> <span class="num">(2,220)</span></a
                     >
                   </li>
                   <li>
-                    <a class="cat" href="#"
+                    <a class="cat" href="#categories"
                       ><span>Older</span> <span class="num">(2,220)</span></a
                     >
                   </li>
@@ -145,7 +145,11 @@
             </div>
             <div class="col-2">
               <div class="sort-menu">
-                <h2>Shop All</h2>
+                <div>
+                  <a class="main-cat" href="#categories"><b>Shop</b></a>
+                  <span>/</span> <strong class="categ">All</strong>
+                </div>
+
                 <div class="btn">
                   <button class="dropdown" id="reference">
                     Reference &or;
@@ -158,7 +162,7 @@
                       >Name, Z to A</a
                     >
                     <div class="divider"></div>
-                    <a href="#reference" class="item" type-index="3"
+                    <a href="#reference" class="item active" type-index="3"
                       >Price, low to high</a
                     >
                     <a href="#reference" class="item" type-index="4"
