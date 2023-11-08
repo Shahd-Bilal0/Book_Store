@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product-page</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--  -->
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="../css/share.css" />
+    <link rel="stylesheet" href="../css/pdp.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="../js/share.js"></script>
+  </head>
+
+  <body>
+    <div class="scroller"></div>
+    <button class="up"><img src="../assets/images/up1.png" alt="" /></button>
+    <!-- Start Header  -->
+    <header></header>
+    <!-- End   Header -->
+    <!-- spikes -->
+    <div class="spikes"></div>
+
+    <!-- Start Hero Banner  -->
+    <section class="hero-banner">
+      <div class="row">
+        <h1>Shop Detail</h1>
+        <div class="info">
+          <p><a href="index.html">Home</a></p>
+          <p class="dash">/</p>
+          <p><a href="book.html">Shop</a></p>
+          <p class="dash">/</p>
+          <p>The Leaf Thief</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Banner  -->
+
+    <!-- Start product detail page -->
+    <section class="pdp">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/children/3a.jpg" alt="Image" />
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/children/3c.jpg" alt="Image" />
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/children/3d.jpg" alt="Image" />
+              </div>
+              <div class="carousel-item active">
+                <img src="../assets/children/3b.jpg" alt="Image" />
+              </div>
+              <button id="nextC" class="nextC">
+                <i class="fas fa-angle-right change-background fa-2x"></i>
+              </button>
+              <button id="prevC" class="prevC">
+                <i class="fas fa-angle-left change-background fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col product-details">
+            <h3>The Leaf Thief</h3>
+            <h3 class="price">$150.00</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+              assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam
+              doloremque rerum beatae ratione neque. Nihil blanditiis pariatur
+              voluptates cupiditate? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit
+              vel a pariatur incidunt velit iste tempore tempora necessitatibus
+              maiores deleniti quos quasi. Debitis, cupiditate.
+            </p>
+            <div class="quan">
+              <div class="inputs">
+                <div>
+                  <button class="btn">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                </div>
+                <input type="text" value="1" />
+                <div>
+                  <button class="btn">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <button class="add btn">
+                <i class="fa fa-shopping-cart"></i> Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End product detail page -->
+
+    <!-- Start Fotter -->
+    <footer></footer>
+    <!-- End   Footer -->
+    <script src="../js/pdp.js"></script>
+  </body>
+</html>
