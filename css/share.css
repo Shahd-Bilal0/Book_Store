@@ -7,6 +7,9 @@
   --main-duration: 0.3s;
   --v: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* End   Variables */
 
 /* Start Global Rules */

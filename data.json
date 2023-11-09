@@ -1,0 +1,420 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "title": "Whats Wrong with a pet Dinosaur",
+      "price": 17,
+      "discountPrice": 25,
+      "imageUrl": "../assets/children/1.jpg",
+      "categories": "children",
+      "type": "Sci-Fi"
+    },
+    {
+      "id": 2,
+      "title": "Silly Jokes",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/2.jpg",
+      "categories": "children",
+      "type": "Fantasy"
+    },
+    {
+      "id": 3,
+      "title": "the LEAF THIEF",
+      "price": 150,
+      "discountPrice": 20,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
+      "imageUrl": "../assets/children/3.jpg",
+      "otherImages": [
+        "../assets/children/3b.jpg",
+        "../assets/children/3c.jpg",
+        "../assets/children/3d.jpg",
+        "../assets/children/3e.jpg",
+        "../assets/children/3f.jpg",
+        "../assets/children/3g.jpg",
+        "../assets/children/3h.jpg",
+        "../assets/children/3i.jpg"
+      ],
+      "categories": "children",
+      "type": "Action"
+    },
+    {
+      "id": 4,
+      "title": "LITTLE HOUSE AND FRIENDS",
+      "price": 16,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/4.jpg",
+      "categories": "children",
+      "type": "Crime"
+    },
+    {
+      "id": 5,
+      "title": "My First Book of Planets",
+      "price": 13,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/5.jpg",
+      "categories": "children",
+      "type": "Romance"
+    },
+    {
+      "id": 6,
+      "title": "The 50 States",
+      "price": 11,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/6.jpg",
+      "categories": "children",
+      "type": "Sci-Fi"
+    },
+    {
+      "id": 7,
+      "title": "Why a Son Needs a Dad",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/7.jpg",
+      "categories": "children",
+      "type": "Fantasy"
+    },
+    {
+      "id": 8,
+      "title": "Little Planets",
+      "price": 12,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/8.jpg",
+      "categories": "children",
+      "type": "Action"
+    },
+    {
+      "id": 9,
+      "title": "Awesome Facts",
+      "price": 15,
+      "discountPrice": 25,
+      "imageUrl": "../assets/children/9.jpg",
+      "categories": "children",
+      "type": "Crime"
+    },
+    {
+      "id": 10,
+      "title": "How to Catch a Mermaid",
+      "price": 13,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/10.jpg",
+      "categories": "children",
+      "type": "Romance"
+    },
+    {
+      "id": 11,
+      "title": "If Animals Kissed Good Night",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/11.jpg",
+      "categories": "children",
+      "type": "Sci-Fi"
+    },
+    {
+      "id": 12,
+      "title": "Why a Son Needs a Mom",
+      "price": 15,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/12.jpg",
+      "categories": "children",
+      "type": "Fantasy"
+    },
+    {
+      "id": 13,
+      "title": "The Seeking Tree",
+      "price": 13,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/13.jpg",
+      "categories": "children",
+      "type": "Action"
+    },
+    {
+      "id": 14,
+      "title": "Everything children' Science Experiments",
+      "price": 30,
+      "discountPrice": 40,
+      "imageUrl": "../assets/children/14.jpg",
+      "categories": "children",
+      "type": "Crime"
+    },
+    {
+      "id": 15,
+      "title": "The Not So Special Fish",
+      "price": 8,
+      "discountPrice": 10,
+      "imageUrl": "../assets/children/15.jpg",
+      "categories": "children",
+      "type": "Romance"
+    },
+    {
+      "id": 16,
+      "title": "The Wonderful Things You Will Be Hardcover",
+      "price": 16,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/16.jpg",
+      "categories": "children",
+      "type": "Sci-Fi"
+    },
+    {
+      "id": 17,
+      "title": "How to Catch the Easter Bunny",
+      "price": 15,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/17.jpg",
+      "categories": "children",
+      "type": "Fantasy"
+    },
+    {
+      "id": 18,
+      "title": "My Magical Choices",
+      "price": 11,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/18.jpg",
+      "categories": "children",
+      "type": "Action"
+    },
+    {
+      "id": 19,
+      "title": "The Scarecrow",
+      "price": 10,
+      "discountPrice": 20,
+      "imageUrl": "../assets/children/19.jpg",
+      "categories": "children",
+      "type": "Crime"
+    },
+    {
+      "id": 20,
+      "title": "Leaf Man",
+      "price": 19,
+      "discountPrice": 25,
+      "imageUrl": "../assets/children/20.jpg",
+      "categories": "children",
+      "type": "Romance"
+    },
+    {
+      "id": 21,
+      "title": "What's In The Forest?",
+      "price": 8,
+      "discountPrice": 25,
+      "imageUrl": "../assets/children/21.jpg",
+      "categories": "children",
+      "type": "Sci-Fi"
+    },
+    {
+      "id": 22,
+      "title": "Harry Potter Coloring Book",
+      "price": 17,
+      "discountPrice": 25,
+      "imageUrl": "../assets/Adults/1.jpg",
+      "categories": "Adults",
+      "type": "Fantasy"
+    },
+    {
+      "id": 23,
+      "title": "Harry Potter Magical Places",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/2.jpg",
+      "categories": "Adults",
+      "type": "Sci-Fi"
+    },
+    {
+      "id": 24,
+      "title": "Harry Potter Origami Volume",
+      "price": 10,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/3.jpg",
+      "categories": "Adults",
+      "type": "Fantasy"
+    },
+    {
+      "id": 25,
+      "title": "Relaxing Flowers",
+      "price": 16,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/4.jpg",
+      "categories": "Adults",
+      "type": "Romance"
+    },
+    {
+      "id": 26,
+      "title": "Catching Fire",
+      "price": 13,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/5.jpg",
+      "categories": "Adults",
+      "type": "Action"
+    },
+    {
+      "id": 27,
+      "title": "The Ballad of Songbirds and Snakes",
+      "price": 11,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/6.jpg",
+      "categories": "Adults",
+      "type": "Fantasy"
+    },
+    {
+      "id": 28,
+      "title": "Vintage Christmas Village",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/7.jpg",
+      "categories": "Adults",
+      "type": "Romance"
+    },
+    {
+      "id": 29,
+      "title": "Unbroken",
+      "price": 12,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/8.jpg",
+      "categories": "Adults",
+      "type": "Action"
+    },
+    {
+      "id": 30,
+      "title": "Vintage Cars and Trucks",
+      "price": 15,
+      "discountPrice": 25,
+      "imageUrl": "../assets/Adults/9.jpg",
+      "categories": "Adults",
+      "type": "Crime"
+    },
+    {
+      "id": 31,
+      "title": "The Silent Wife",
+      "price": 13,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/10.jpg",
+      "categories": "Adults",
+      "type": "Romance"
+    },
+    {
+      "id": 32,
+      "title": "It Ends with Us",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/11.jpg",
+      "categories": "Adults",
+      "type": "Fantasy"
+    },
+    {
+      "id": 33,
+      "title": "Maybe Someday",
+      "price": 15,
+      "discountPrice": 20,
+      "imageUrl": "../assets/Adults/12.jpg",
+      "categories": "Adults",
+      "type": "Sci-Fi"
+    },
+    {
+      "id": 34,
+      "title": "Some Kind of Comfort",
+      "price": 17,
+      "discountPrice": 25,
+      "imageUrl": "../assets/older/1.jpg",
+      "categories": "older",
+      "type": "Fantasy"
+    },
+    {
+      "id": 35,
+      "title": "TimeOuts Titanic",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/2.jpg",
+      "categories": "older",
+      "type": "Sci-Fi"
+    },
+    {
+      "id": 36,
+      "title": "The Way I Used to Be Paperback",
+      "price": 10,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/3.jpg",
+      "categories": "older",
+      "type": "Fantasy"
+    },
+    {
+      "id": 37,
+      "title": "The Prison Healer",
+      "price": 16,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/4.jpg",
+      "categories": "older",
+      "type": "Romance"
+    },
+    {
+      "id": 38,
+      "title": "Once Upon a Dream",
+      "price": 13,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/5.jpg",
+      "categories": "older",
+      "type": "Action"
+    },
+    {
+      "id": 39,
+      "title": "LORE",
+      "price": 11,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/6.jpg",
+      "categories": "older",
+      "type": "Fantasy"
+    },
+    {
+      "id": 40,
+      "title": "How I Magically Messed Up My Life",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/7.jpg",
+      "categories": "older",
+      "type": "Romance"
+    },
+    {
+      "id": 41,
+      "title": "The Girl in the Castlek",
+      "price": 12,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/8.jpg",
+      "categories": "older",
+      "type": "Action"
+    },
+    {
+      "id": 42,
+      "title": "Stephen king",
+      "price": 15,
+      "discountPrice": 25,
+      "imageUrl": "../assets/older/9.jpg",
+      "categories": "older",
+      "type": "Crime"
+    },
+    {
+      "id": 43,
+      "title": "The Island Paperback",
+      "price": 13,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/10.jpg",
+      "categories": "older",
+      "type": "Romance"
+    },
+    {
+      "id": 44,
+      "title": "Hatchet Paperback",
+      "price": 9,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/11.jpg",
+      "categories": "older",
+      "type": "Fantasy"
+    },
+    {
+      "id": 45,
+      "title": "47 Days",
+      "price": 15,
+      "discountPrice": 20,
+      "imageUrl": "../assets/older/12.jpg",
+      "categories": "older",
+      "type": "Sci-Fi"
+    }
+  ]
+}
