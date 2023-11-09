@@ -35,7 +35,6 @@ let selectedProduct = {
     maiores deleniti quos quasi. Debitis, cupiditate.`,
   imageUrl: "../assets/children/3.jpg",
   otherImages: [
-    "../assets/children/3a.jpg",
     "../assets/children/3b.jpg",
     "../assets/children/3c.jpg",
     "../assets/children/3d.jpg",
