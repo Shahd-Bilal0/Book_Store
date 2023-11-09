@@ -43,7 +43,6 @@ let selectedProduct = {
     "../assets/children/3g.jpg",
     "../assets/children/3h.jpg",
     "../assets/children/3i.jpg",
-    "../assets/children/3j.jpg",
   ],
   categories: "children",
   type: "Action",
@@ -57,6 +56,7 @@ const input = document.querySelector(".inputs input");
 const minusBtn = document.querySelector(".btn.minus");
 const plusBtn = document.querySelector(".btn.plus");
 let carousel = document.querySelector(".carousel");
+let Secondcarousel = document.querySelector(".second-carousel");
 let prevButton = document.getElementById("prevC");
 let nextButton = document.getElementById("nextC");
 let currentIndex = 0;
@@ -67,27 +67,44 @@ price.innerHTML = `${selectedProduct.price}$`;
 desc.innerHTML = `${selectedProduct.description}`;
 //carousel
 for (let i = 0; i < selectedProduct.otherImages.length; i++) {
-  const carouselItem = document.createElement("div");
+  let carouselItem = document.createElement("div");
   carouselItem.classList.add("carousel-item");
+  let carouselItem2 = document.createElement("div");
+  carouselItem2.classList.add("carousel-item-two");
   if (i == 0) {
     carouselItem.classList.add("active");
+    carouselItem2.classList.add("active");
   }
-  const img = document.createElement("img");
+  let img = document.createElement("img");
   img.src = selectedProduct.otherImages[i];
   img.alt = "Image";
+  let img2 = document.createElement("img");
+  img2.src = selectedProduct.otherImages[i];
+  img2.alt = "Image";
 
   carouselItem.appendChild(img);
+  carouselItem2.appendChild(img2);
   carousel.appendChild(carouselItem);
+  Secondcarousel.appendChild(carouselItem2);
 }
 let carouselItems = document.querySelectorAll(".carousel-item");
-console.log(carouselItems);
-
+let SecondCarouselItems = document.querySelectorAll(".carousel-item-two");
+console.log(SecondCarouselItems);
+SecondCarouselItems.forEach((e, index) => {
+  e.addEventListener("click", () => {
+    console.log(index);
+    currentIndex = index;
+    showSlide(index);
+  });
+});
 function showSlide(index) {
   carouselItems.forEach((e, i) => {
     if (i === index) {
       e.classList.add("active");
+      SecondCarouselItems[i].classList.add("active");
     } else {
       e.classList.remove("active");
+      SecondCarouselItems[i].classList.remove("active");
     }
   });
 }

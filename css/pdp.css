@@ -34,7 +34,7 @@ body {
 .hero-banner .row {
   min-height: 300px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-direction: column;
 }
@@ -67,44 +67,46 @@ body {
   padding: 25px 15px;
   margin-bottom: 50px;
 }
+/* Row */
 .pdp .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 .pdp .row .col {
   margin: 0;
   flex: 0 0 100%;
-  height: 300px;
   margin-bottom: 50px;
 }
-.pdp .row img {
-  height: 300px;
+.product-img {
+  display: flex;
+  flex-direction: column;
+}
+/* Carsoul */
+.product-img .carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel .carousel-item {
+  display: none;
+}
+.carousel .carousel-item.active {
+  display: block;
+}
+.carousel .carousel-item img {
   width: 100%;
   vertical-align: middle;
   border-style: none;
 }
 
-.pdp .row .carousel-item {
-  display: none;
-}
-
-.pdp .row .carousel-item.active {
-  display: block;
-}
-
-.carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
 .carousel .nextC,
 .carousel .prevC {
   position: absolute;
   top: 0;
-  height: 100%;
   z-index: 1;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,11 +115,7 @@ body {
   cursor: pointer;
   background-color: #ffffffad;
 }
-.prevC.disabled,
-.nextC.disabled {
-  display: none;
-  pointer-events: none;
-}
+
 .carousel i {
   color: var(--darkblue-color);
 }
@@ -127,7 +125,27 @@ body {
 .carousel .prevC {
   left: 0;
 }
-/*  */
+
+/* Secondcarousel  */
+.product-img .second-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.product-img .second-carousel .carousel-item-two {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.product-img .second-carousel .carousel-item-two.active {
+  opacity: 0.3;
+}
+.product-img .second-carousel .carousel-item-two img {
+  width: 100%;
+  height: 100%;
+}
 .product-details {
   padding: 0 15px;
   display: flex;
@@ -172,6 +190,7 @@ body {
   padding: 6px 16px;
   font-size: 16px;
   font-weight: bold;
+  height: 50px;
 }
 .btn:hover {
   color: white;
@@ -199,13 +218,12 @@ body {
   .container {
     max-width: 850px;
   }
+  .pdp .row .col {
+    flex: 0 0 49%;
+  }
 }
 @media screen and (min-width: 1025px) {
   .container {
     max-width: 1100px;
-  }
-
-  .pdp .row .col {
-    flex: 0 0 50%;
   }
 }
