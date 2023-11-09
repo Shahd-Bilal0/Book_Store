@@ -107,7 +107,7 @@ nextButton.addEventListener("click", () => {
 });
 function autoAdvance() {
   changeSlide(1);
-  setTimeout(autoAdvance, 5000);
+  setTimeout(autoAdvance, 7000);
 }
 // Start the auto-advancing carousel
 setTimeout(autoAdvance, 7000);
