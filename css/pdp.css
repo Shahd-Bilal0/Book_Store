@@ -75,9 +75,10 @@ body {
 .pdp .row .col {
   margin: 0;
   flex: 0 0 100%;
+  height: 300px;
 }
 .pdp .row img {
-  height: 100%;
+  height: 300px;
   width: 100%;
   vertical-align: middle;
   border-style: none;
@@ -108,7 +109,7 @@ body {
   text-align: center;
   border: none;
   cursor: pointer;
-  background-color: #eeeeee6b;
+  background-color: #ffffffad;
 }
 .prevC.disabled,
 .nextC.disabled {
@@ -140,7 +141,7 @@ body {
   color: #1c1c1c;
   color: var(--darkblue-color);
 }
-.product-details .price {
+.product-details .productPrice {
   color: #febb19e0;
 }
 .product-details p {
@@ -172,6 +173,9 @@ body {
 }
 .btn:hover {
   color: white;
+}
+.btn.disabled {
+  pointer-events: none;
 }
 .inputs input {
   flex: 1 1 auto;
