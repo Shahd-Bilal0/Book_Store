@@ -34,7 +34,7 @@ body {
 .hero-banner .row {
   min-height: 300px;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
