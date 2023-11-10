@@ -41,7 +41,8 @@ fetch("../data.json")
   .then((response) => response.json())
   .then((data) => {
     MainProducts = data.Products;
-    selectedProduct = MainProducts[givenId - 1];
+    // selectedProduct = MainProducts[givenId - 1];
+    selectedProduct = MainProducts[21 - 1];
   })
   .then(() => waitData());
 

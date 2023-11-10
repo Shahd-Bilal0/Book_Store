@@ -170,10 +170,13 @@ body {
 }
 .product-details .productPrice {
   color: #febb19e0;
+  margin-top: 15px;
 }
 .product-details p {
   color: #6f6f6f;
   font-size: 16px;
+  line-height: 1.7;
+  margin-top: 10px;
 }
 .product-details .quan {
   display: flex;
