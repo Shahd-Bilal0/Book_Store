@@ -134,14 +134,17 @@ body {
 .product-img .second-carousel {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-top: 20px;
 }
 .product-img .second-carousel .carousel-item-two {
-  width: calc(100% / 9);
+  width: calc(100% / 8);
   height: 50px;
   border: 2px solid black;
+  margin-right: 5px;
   cursor: pointer;
+}
+.product-img .second-carousel .carousel-item-two:last-child {
+  margin-right: 0;
 }
 .product-img .second-carousel .carousel-item-two.active {
   opacity: 0.2;
