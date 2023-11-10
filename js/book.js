@@ -198,14 +198,15 @@ function displayProduct(products) {
             </div>
           `;
     productsD.appendChild(newCard);
-  }
-  let cards = document.querySelectorAll(".products .card");
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      var hiddenInputValue = card.querySelector('input[type="hidden"]').value;
+    newCard.addEventListener("click", () => {
+      console.log(newCard);
+      var hiddenInputValue = newCard.querySelector(
+        'input[type="hidden"]'
+      ).value;
       window.location.href = `../html/product-page.html#pdp/?id=${hiddenInputValue}`;
     });
-  });
+  }
+
   function updatePagination() {
     const totalPages = Math.ceil(products.length / itemsPerPage);
     let ulP = document.querySelector(".pagination .second-ul");

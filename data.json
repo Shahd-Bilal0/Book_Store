@@ -5,7 +5,9 @@
       "title": "Whats Wrong with a pet Dinosaur",
       "price": 17,
       "discountPrice": 25,
+      "description": "Get ready to embark on a laugh-out-loud adventure with Tony Philips's award-winning collection of whimsical poetry and beautiful illustrations. Perfect for elementary readers who love to laugh, giggle, yuck, and chuckle, this bookwon the Independent Press Award for Children's Poetry, as well as the gold medal for poetry in the Moonbeam Children's Book Awards, and was a finalist in the Wishing Shelf Book Awards and the Next Generation Indie Book Awards! Inside this charming collection, you'll discover: the secret letter that comes after Z, he bestest animal in the world, what pets do when their owners are away how to cope with a creature under your bed  And much more!",
       "imageUrl": "../assets/children/1.jpg",
+      "otherImages": ["../assets/children/1a.jpg"],
       "categories": "children",
       "type": "Sci-Fi"
     },
@@ -21,19 +23,19 @@
     {
       "id": 3,
       "title": "the LEAF THIEF",
-      "price": 150,
+      "price": 30,
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/children/3.jpg",
       "otherImages": [
+        "../assets/children/3a.jpg",
         "../assets/children/3b.jpg",
         "../assets/children/3c.jpg",
         "../assets/children/3d.jpg",
         "../assets/children/3e.jpg",
         "../assets/children/3f.jpg",
         "../assets/children/3g.jpg",
-        "../assets/children/3h.jpg",
-        "../assets/children/3i.jpg"
+        "../assets/children/3h.jpg"
       ],
       "categories": "children",
       "type": "Action"
