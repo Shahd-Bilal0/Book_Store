@@ -51,6 +51,7 @@ body {
 
 .hero-banner .row .info {
   display: inline-flex;
+  font-size: large;
 }
 .hero-banner .row .info p {
   margin: 0;
