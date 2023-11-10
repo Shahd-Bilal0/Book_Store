@@ -17,6 +17,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/children/2.jpg",
+      "otherImages": ["../assets/children/2a.jpg"],
       "categories": "children",
       "type": "Fantasy"
     },
@@ -46,6 +47,7 @@
       "price": 16,
       "discountPrice": 20,
       "imageUrl": "../assets/children/4.jpg",
+      "otherImages": ["../assets/children/4a.jpg"],
       "categories": "children",
       "type": "Crime"
     },
@@ -55,6 +57,7 @@
       "price": 13,
       "discountPrice": 20,
       "imageUrl": "../assets/children/5.jpg",
+      "otherImages": ["../assets/children/5a.jpg"],
       "categories": "children",
       "type": "Romance"
     },
@@ -64,6 +67,7 @@
       "price": 11,
       "discountPrice": 20,
       "imageUrl": "../assets/children/6.jpg",
+      "otherImages": ["../assets/children/6a.jpg"],
       "categories": "children",
       "type": "Sci-Fi"
     },
@@ -73,6 +77,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/children/7.jpg",
+      "otherImages": ["../assets/children/7a.jpg"],
       "categories": "children",
       "type": "Fantasy"
     },
@@ -82,6 +87,7 @@
       "price": 12,
       "discountPrice": 20,
       "imageUrl": "../assets/children/8.jpg",
+      "otherImages": ["../assets/children/8a.jpg"],
       "categories": "children",
       "type": "Action"
     },
@@ -91,6 +97,7 @@
       "price": 15,
       "discountPrice": 25,
       "imageUrl": "../assets/children/9.jpg",
+      "otherImages": ["../assets/children/9a.jpg"],
       "categories": "children",
       "type": "Crime"
     },
@@ -100,6 +107,7 @@
       "price": 13,
       "discountPrice": 20,
       "imageUrl": "../assets/children/10.jpg",
+      "otherImages": ["../assets/children/10a.jpg"],
       "categories": "children",
       "type": "Romance"
     },
@@ -109,6 +117,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/children/11.jpg",
+      "otherImages": ["../assets/children/11a.jpg"],
       "categories": "children",
       "type": "Sci-Fi"
     },
@@ -118,6 +127,7 @@
       "price": 15,
       "discountPrice": 20,
       "imageUrl": "../assets/children/12.jpg",
+      "otherImages": ["../assets/children/12a.jpg"],
       "categories": "children",
       "type": "Fantasy"
     },
@@ -127,6 +137,7 @@
       "price": 13,
       "discountPrice": 20,
       "imageUrl": "../assets/children/13.jpg",
+      "otherImages": ["../assets/children/13a.jpg"],
       "categories": "children",
       "type": "Action"
     },
@@ -136,6 +147,7 @@
       "price": 30,
       "discountPrice": 40,
       "imageUrl": "../assets/children/14.jpg",
+      "otherImages": ["../assets/children/14a.jpg"],
       "categories": "children",
       "type": "Crime"
     },
@@ -145,6 +157,7 @@
       "price": 8,
       "discountPrice": 10,
       "imageUrl": "../assets/children/15.jpg",
+      "otherImages": ["../assets/children/15a.jpg"],
       "categories": "children",
       "type": "Romance"
     },
@@ -154,6 +167,7 @@
       "price": 16,
       "discountPrice": 20,
       "imageUrl": "../assets/children/16.jpg",
+      "otherImages": ["../assets/children/16a.jpg"],
       "categories": "children",
       "type": "Sci-Fi"
     },
@@ -163,6 +177,7 @@
       "price": 15,
       "discountPrice": 20,
       "imageUrl": "../assets/children/17.jpg",
+      "otherImages": ["../assets/children/17a.jpg"],
       "categories": "children",
       "type": "Fantasy"
     },
@@ -172,6 +187,7 @@
       "price": 11,
       "discountPrice": 20,
       "imageUrl": "../assets/children/18.jpg",
+      "otherImages": ["../assets/children/18a.jpg"],
       "categories": "children",
       "type": "Action"
     },
@@ -181,6 +197,7 @@
       "price": 10,
       "discountPrice": 20,
       "imageUrl": "../assets/children/19.jpg",
+      "otherImages": ["../assets/children/19a.jpg"],
       "categories": "children",
       "type": "Crime"
     },
@@ -190,6 +207,7 @@
       "price": 19,
       "discountPrice": 25,
       "imageUrl": "../assets/children/20.jpg",
+      "otherImages": ["../assets/children/20a.jpg"],
       "categories": "children",
       "type": "Romance"
     },
@@ -199,6 +217,7 @@
       "price": 8,
       "discountPrice": 25,
       "imageUrl": "../assets/children/21.jpg",
+      "otherImages": ["../assets/children/21a.jpg"],
       "categories": "children",
       "type": "Sci-Fi"
     },
@@ -217,6 +236,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/2.jpg",
+      "otherImages": ["../assets/Adults/2.jpg"],
       "categories": "Adults",
       "type": "Sci-Fi"
     },
@@ -226,6 +246,7 @@
       "price": 10,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/3.jpg",
+      "otherImages": ["../assets/Adults/3.jpg"],
       "categories": "Adults",
       "type": "Fantasy"
     },
@@ -235,6 +256,7 @@
       "price": 16,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/4.jpg",
+      "otherImages": ["../assets/Adults/4.jpg"],
       "categories": "Adults",
       "type": "Romance"
     },
@@ -244,6 +266,7 @@
       "price": 13,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/5.jpg",
+      "otherImages": ["../assets/Adults/5.jpg"],
       "categories": "Adults",
       "type": "Action"
     },
@@ -253,6 +276,7 @@
       "price": 11,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/6.jpg",
+      "otherImages": ["../assets/Adults/6.jpg"],
       "categories": "Adults",
       "type": "Fantasy"
     },
@@ -262,6 +286,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/7.jpg",
+      "otherImages": ["../assets/Adults/7.jpg"],
       "categories": "Adults",
       "type": "Romance"
     },
@@ -271,6 +296,7 @@
       "price": 12,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/8.jpg",
+      "otherImages": ["../assets/Adults/8.jpg"],
       "categories": "Adults",
       "type": "Action"
     },
@@ -280,6 +306,7 @@
       "price": 15,
       "discountPrice": 25,
       "imageUrl": "../assets/Adults/9.jpg",
+      "otherImages": ["../assets/Adults/9.jpg"],
       "categories": "Adults",
       "type": "Crime"
     },
@@ -289,6 +316,7 @@
       "price": 13,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/10.jpg",
+      "otherImages": ["../assets/Adults/10.jpg"],
       "categories": "Adults",
       "type": "Romance"
     },
@@ -298,6 +326,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/11.jpg",
+      "otherImages": ["../assets/Adults/11.jpg"],
       "categories": "Adults",
       "type": "Fantasy"
     },
@@ -307,6 +336,7 @@
       "price": 15,
       "discountPrice": 20,
       "imageUrl": "../assets/Adults/12.jpg",
+      "otherImages": ["../assets/Adults/12.jpg"],
       "categories": "Adults",
       "type": "Sci-Fi"
     },
@@ -316,6 +346,7 @@
       "price": 17,
       "discountPrice": 25,
       "imageUrl": "../assets/older/1.jpg",
+      "otherImages": ["../assets/older/1.jpg"],
       "categories": "older",
       "type": "Fantasy"
     },
@@ -325,6 +356,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/older/2.jpg",
+      "otherImages": ["../assets/older/2.jpg"],
       "categories": "older",
       "type": "Sci-Fi"
     },
@@ -334,6 +366,7 @@
       "price": 10,
       "discountPrice": 20,
       "imageUrl": "../assets/older/3.jpg",
+      "otherImages": ["../assets/older/3.jpg"],
       "categories": "older",
       "type": "Fantasy"
     },
@@ -343,6 +376,7 @@
       "price": 16,
       "discountPrice": 20,
       "imageUrl": "../assets/older/4.jpg",
+      "otherImages": ["../assets/older/4.jpg"],
       "categories": "older",
       "type": "Romance"
     },
@@ -352,6 +386,7 @@
       "price": 13,
       "discountPrice": 20,
       "imageUrl": "../assets/older/5.jpg",
+      "otherImages": ["../assets/older/5.jpg"],
       "categories": "older",
       "type": "Action"
     },
@@ -361,6 +396,7 @@
       "price": 11,
       "discountPrice": 20,
       "imageUrl": "../assets/older/6.jpg",
+      "otherImages": ["../assets/older/6.jpg"],
       "categories": "older",
       "type": "Fantasy"
     },
@@ -370,6 +406,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/older/7.jpg",
+      "otherImages": ["../assets/older/7.jpg"],
       "categories": "older",
       "type": "Romance"
     },
@@ -379,6 +416,7 @@
       "price": 12,
       "discountPrice": 20,
       "imageUrl": "../assets/older/8.jpg",
+      "otherImages": ["../assets/older/8.jpg"],
       "categories": "older",
       "type": "Action"
     },
@@ -388,6 +426,7 @@
       "price": 15,
       "discountPrice": 25,
       "imageUrl": "../assets/older/9.jpg",
+      "otherImages": ["../assets/older/9.jpg"],
       "categories": "older",
       "type": "Crime"
     },
@@ -397,6 +436,7 @@
       "price": 13,
       "discountPrice": 20,
       "imageUrl": "../assets/older/10.jpg",
+      "otherImages": ["../assets/older/10.jpg"],
       "categories": "older",
       "type": "Romance"
     },
@@ -406,6 +446,7 @@
       "price": 9,
       "discountPrice": 20,
       "imageUrl": "../assets/older/11.jpg",
+      "otherImages": ["../assets/older/11.jpg"],
       "categories": "older",
       "type": "Fantasy"
     },
@@ -415,6 +456,7 @@
       "price": 15,
       "discountPrice": 20,
       "imageUrl": "../assets/older/12.jpg",
+      "otherImages": ["../assets/older/12.jpg"],
       "categories": "older",
       "type": "Sci-Fi"
     }
