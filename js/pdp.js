@@ -33,6 +33,7 @@ let carousel = document.querySelector(".carousel");
 let Secondcarousel = document.querySelector(".second-carousel");
 let prevButton = document.getElementById("prevC");
 let nextButton = document.getElementById("nextC");
+let nameP = document.getElementById("name-product");
 let currentIndex = 0;
 const queryString = window.location.href;
 var givenId = queryString.split("=")[1];
@@ -41,8 +42,8 @@ fetch("../data.json")
   .then((response) => response.json())
   .then((data) => {
     MainProducts = data.Products;
-    // selectedProduct = MainProducts[givenId - 1];
-    selectedProduct = MainProducts[21 - 1];
+    selectedProduct = MainProducts[givenId - 1];
+    // selectedProduct = MainProducts[21 - 1];
   })
   .then(() => waitData());
 
@@ -50,6 +51,7 @@ function waitData() {
   console.log(selectedProduct);
   //data
   title.innerHTML = `${selectedProduct.title.toUpperCase()}`;
+  nameP.innerHTML = `${selectedProduct.title}`;
   price.innerHTML = `${selectedProduct.price}$`;
   desc.innerHTML = `${selectedProduct.description}`;
   //carousel
