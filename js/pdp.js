@@ -109,10 +109,10 @@ function waitData() {
   });
   function autoAdvance() {
     changeSlide(1);
-    setTimeout(autoAdvance, 7000);
+    setTimeout(autoAdvance, 10000);
   }
   // Start the auto-advancing carousel
-  setTimeout(autoAdvance, 7000);
+  setTimeout(autoAdvance, 10000);
 
   //quantity
   // Decrease the value
@@ -135,4 +135,14 @@ function waitData() {
     minusBtn.classList.remove("disabled");
   });
 }
-//PDP
+let lens = document.getElementById("lens");
+let first = document.getElementById("first");
+let second = document.getElementById("second");
+
+first.addEventListener("mousemove", (e) => {
+  var x = e.clientX - e.target.offsetLeft;
+  var y = e.clientY - e.target.offsetTop;
+
+  lens.style.left = x + "px";
+  lens.style.top = e.clientY + "px";
+});

@@ -194,10 +194,11 @@ function displayProduct(products) {
             <div class="info">
               <a href="" class="btn"><i class="icon fas fa-heart"></i></a>
               <a href="" class="btn"><i class="icon fas fa-shopping-cart"></i></a>
-              <a href="" class="btn"><i class="icon fas fa-eye"></i></a>
+              <a href="../html/product-page.html#pdp/?id=${id}" class="btn eye"><i class="icon fas fa-eye"></i></a>
             </div>
           `;
     productsD.appendChild(newCard);
+
     newCard.addEventListener("click", () => {
       console.log(newCard);
       var hiddenInputValue = newCard.querySelector(
