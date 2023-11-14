@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h2 id="title">Sign Up</h2>
+        <form>
+          <div class="input-group">
+            <div class="input-field" id="emailField">
+              <i class="fa fa-solid fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fa fa-solid fa-user"></i>
+              <input type="text" placeholder="Name" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa fa-solid fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <p id="lostPass" class="disable">
+              Lost password <a>Click Here!</a>
+            </p>
+          </div>
+          <div class="btn-field">
+            <button type="button" id="signupBtn">Sign up</button>
+            <button type="button" id="signinBtn" class="disable">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../js/login.js"></script>
+  </body>
+</html>
