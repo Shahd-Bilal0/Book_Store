@@ -126,6 +126,9 @@ body {
 .plp #categories {
   cursor: pointer;
 }
+.bcat h3 {
+  cursor: pointer;
+}
 p {
   font-size: 16px;
   font-weight: 600;

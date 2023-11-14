@@ -57,7 +57,7 @@ function waitData() {
     heading.textContent = cat.name;
 
     const link = document.createElement("a");
-    link.href = `../html/book.html#plp/?id=${cat.id - 1}`;
+    link.href = `../html/book.html#plp/?id=c${cat.id - 1}`;
     link.textContent = "Go Shop";
 
     info.appendChild(heading);
@@ -82,7 +82,7 @@ function waitData() {
     image.src = type.imageUrl;
     image.alt = "";
     const link = document.createElement("a");
-    link.href = type.link || "#";
+    link.href = `../html/book.html#plp/?id=t${type.id - 1}` || "#";
     link.textContent = "shop now";
     if (temp.length === 0) link.style.pointerEvents = "none";
 

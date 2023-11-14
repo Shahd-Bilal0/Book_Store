@@ -91,13 +91,22 @@ function waitData() {
     if (givenId == undefined) {
       categorProd(1);
     } else {
-      categorProd(0, givenId, categories[givenId].children[0].textContent);
+      if (givenId[0] == "c") {
+        categorProd(
+          0,
+          givenId[1],
+          categories[givenId[1]].children[0].textContent
+        );
 
-      categories.forEach((l) => {
-        l.classList.remove("active");
-      });
-      categories[givenId].classList.add("active");
-      tit.innerHTML = categories[givenId].children[0].innerHTML;
+        categories.forEach((l) => {
+          l.classList.remove("active");
+        });
+        categories[givenId[1]].classList.add("active");
+        tit.innerHTML = categories[givenId[1]].children[0].innerHTML;
+      } else if (givenId[0] == "t") {
+        checkboxes[givenId[1]].checked = true;
+        updateSelectedChoices();
+      }
     }
   }
 }
@@ -342,5 +351,9 @@ function compareByPriceDescending(a, b) {
 //
 let cat = document.querySelector(".categories h3");
 cat.addEventListener("click", () => {
-  window.location.href = "../html/categories.html";
+  window.location.href = "../html/categories.html#byAge";
+});
+let bcat = document.querySelector(".bcat h3");
+bcat.addEventListener("click", () => {
+  window.location.href = "../html/categories.html#byType";
 });
