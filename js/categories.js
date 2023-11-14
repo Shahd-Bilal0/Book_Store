@@ -104,3 +104,4 @@ function waitData() {
     TypeContainer.appendChild(box);
   });
 }
+//
