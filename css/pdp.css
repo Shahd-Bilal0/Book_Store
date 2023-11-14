@@ -244,39 +244,3 @@ body {
     max-width: 1100px;
   }
 }
-/* pdp zoom */
-.zoom {
-  display: flex;
-  flex-direction: row;
-}
-.first,
-.second {
-  width: 500px;
-  height: 500px;
-  border: 3px solid #1c1c1c;
-  background: url("../assets/children/10.jpg");
-  background-size: 100% 100%;
-}
-.first {
-  margin-left: 50px;
-  position: relative;
-  overflow: hidden;
-}
-.second {
-  margin-left: 50px;
-  display: block;
-}
-#lens {
-  width: 150px;
-  height: 150px;
-  background: rgb(0, 0, 0, 0.4);
-  position: absolute;
-
-  border: 3px solid #1c1c1c;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}

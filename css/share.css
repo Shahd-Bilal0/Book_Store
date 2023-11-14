@@ -70,6 +70,7 @@ header .container {
   justify-content: space-between;
 }
 header .logo {
+  margin-bottom: 15px;
   display: flex;
   align-items: flex-end;
   align-self: center;

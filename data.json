@@ -1,4 +1,53 @@
 {
+  "types": [
+    {
+      "id": 1,
+      "name": "Sci-Fi",
+      "imageUrl": "/assets/images/sci-fi.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Fantasy",
+      "imageUrl": "/assets/images/fantasy.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Action",
+      "imageUrl": "/assets/images/c6.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Crime",
+      "imageUrl": "/assets/images/Crime.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Romance",
+      "imageUrl": "/assets/images/Romance.jpg"
+    },
+    {
+      "id": 6,
+      "name": "history",
+      "imageUrl": "/assets/images/history.jpg"
+    }
+  ],
+  "Categories": [
+    {
+      "id": 1,
+      "name": "Children",
+      "imageUrl": "/assets/images/c6.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Adults",
+      "imageUrl": "/assets/images/c3.jfif"
+    },
+    {
+      "id": 3,
+      "name": "Older",
+      "imageUrl": "/assets/images/c1.jfif"
+    }
+  ],
   "Products": [
     {
       "id": 1,

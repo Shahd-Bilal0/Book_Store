@@ -43,7 +43,6 @@ fetch("../data.json")
   .then((data) => {
     MainProducts = data.Products;
     selectedProduct = MainProducts[givenId - 1];
-    // selectedProduct = MainProducts[21 - 1];
   })
   .then(() => waitData());
 
@@ -58,8 +57,10 @@ function waitData() {
   for (let i = 0; i < selectedProduct.otherImages.length; i++) {
     let carouselItem = document.createElement("div");
     carouselItem.classList.add("carousel-item");
+    // carouselItem.classList.add("img-magnifier-container");
     let carouselItem2 = document.createElement("div");
     carouselItem2.classList.add("carousel-item-two");
+
     if (i == 0) {
       carouselItem.classList.add("active");
       carouselItem2.classList.add("active");
@@ -67,16 +68,19 @@ function waitData() {
     let img = document.createElement("img");
     img.src = selectedProduct.otherImages[i];
     img.alt = "Image";
+    // img.classList.add("myimage");
     let img2 = document.createElement("img");
     img2.src = selectedProduct.otherImages[i];
     img2.alt = "Image";
-
     carouselItem.appendChild(img);
+
     carouselItem2.appendChild(img2);
     carousel.appendChild(carouselItem);
     Secondcarousel.appendChild(carouselItem2);
   }
+
   let carouselItems = document.querySelectorAll(".carousel-item");
+
   let SecondCarouselItems = document.querySelectorAll(".carousel-item-two");
   SecondCarouselItems.forEach((e, index) => {
     e.addEventListener("click", () => {
@@ -111,7 +115,7 @@ function waitData() {
     changeSlide(1);
     setTimeout(autoAdvance, 10000);
   }
-  // Start the auto-advancing carousel
+  //   Start the auto-advancing carousel
   setTimeout(autoAdvance, 10000);
 
   //quantity
@@ -135,14 +139,4 @@ function waitData() {
     minusBtn.classList.remove("disabled");
   });
 }
-let lens = document.getElementById("lens");
-let first = document.getElementById("first");
-let second = document.getElementById("second");
-
-first.addEventListener("mousemove", (e) => {
-  var x = e.clientX - e.target.offsetLeft;
-  var y = e.clientY - e.target.offsetTop;
-
-  lens.style.left = x + "px";
-  lens.style.top = e.clientY + "px";
-});
+///

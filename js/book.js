@@ -32,6 +32,10 @@ let main_cat = document.querySelector(".col-2 .sort-menu .main-cat");
 const checkboxes = document.querySelectorAll(".checkbox");
 const checkboxeslab = document.querySelectorAll("label .lab");
 let type_nums = document.querySelectorAll(".bcat .num");
+//
+const queryString = window.location.href;
+var givenId = queryString.split("=")[1];
+console.log(givenId);
 fetch("../data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -79,11 +83,25 @@ function waitData() {
     numsT();
     displayProduct(temp);
   }
-  categorProd(1);
   checkboxes.forEach((e) => {
     e.addEventListener("change", updateSelectedChoices);
   });
+  waitt();
+  function waitt() {
+    if (givenId == undefined) {
+      categorProd(1);
+    } else {
+      categorProd(0, givenId, categories[givenId].children[0].textContent);
+
+      categories.forEach((l) => {
+        l.classList.remove("active");
+      });
+      categories[givenId].classList.add("active");
+      tit.innerHTML = categories[givenId].children[0].innerHTML;
+    }
+  }
 }
+
 //BOOKS BY TYPE
 function numsT() {
   checkboxeslab.forEach((e, index) => {
@@ -321,3 +339,8 @@ function compareByPriceAscending(a, b) {
 function compareByPriceDescending(a, b) {
   return b.price - a.price;
 }
+//
+let cat = document.querySelector(".categories h3");
+cat.addEventListener("click", () => {
+  window.location.href = "../html/categories.html";
+});
