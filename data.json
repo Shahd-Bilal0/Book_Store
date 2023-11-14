@@ -399,7 +399,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/2.jpg",
-      "otherImages": ["../assets/Adults/2a.jpg"],
+      "otherImages": ["../assets/Adults/2.jpg"],
       "categories": "Adults",
       "type": "Sci-Fi"
     },
@@ -410,7 +410,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/3.jpg",
-      "otherImages": ["../assets/Adults/3a.jpg"],
+      "otherImages": ["../assets/Adults/3.jpg"],
       "categories": "Adults",
       "type": "Fantasy"
     },
@@ -421,7 +421,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/4.jpg",
-      "otherImages": ["../assets/Adults/4a.jpg"],
+      "otherImages": ["../assets/Adults/4.jpg"],
       "categories": "Adults",
       "type": "Romance"
     },
@@ -432,7 +432,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/5.jpg",
-      "otherImages": ["../assets/Adults/5a.jpg"],
+      "otherImages": ["../assets/Adults/5.jpg"],
       "categories": "Adults",
       "type": "Action"
     },
@@ -443,7 +443,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/6.jpg",
-      "otherImages": ["../assets/Adults/6a.jpg"],
+      "otherImages": ["../assets/Adults/6.jpg"],
       "categories": "Adults",
       "type": "Fantasy"
     },
@@ -454,7 +454,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/7.jpg",
-      "otherImages": ["../assets/Adults/7a.jpg"],
+      "otherImages": ["../assets/Adults/7.jpg"],
       "categories": "Adults",
       "type": "Romance"
     },
@@ -465,7 +465,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/8.jpg",
-      "otherImages": ["../assets/Adults/8a.jpg"],
+      "otherImages": ["../assets/Adults/8.jpg"],
       "categories": "Adults",
       "type": "Action"
     },
@@ -476,7 +476,7 @@
       "discountPrice": 25,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/9.jpg",
-      "otherImages": ["../assets/Adults/9a.jpg"],
+      "otherImages": ["../assets/Adults/9.jpg"],
       "categories": "Adults",
       "type": "Crime"
     },
@@ -487,7 +487,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/10.jpg",
-      "otherImages": ["../assets/Adults/10a.jpg"],
+      "otherImages": ["../assets/Adults/10.jpg"],
       "categories": "Adults",
       "type": "Romance"
     },
@@ -498,7 +498,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/11.jpg",
-      "otherImages": ["../assets/Adults/11a.jpg"],
+      "otherImages": ["../assets/Adults/11.jpg"],
       "categories": "Adults",
       "type": "Fantasy"
     },
@@ -509,7 +509,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/Adults/12.jpg",
-      "otherImages": ["../assets/Adults/12a.jpg"],
+      "otherImages": ["../assets/Adults/12.jpg"],
       "categories": "Adults",
       "type": "Sci-Fi"
     },
@@ -520,7 +520,7 @@
       "discountPrice": 25,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/1.jpg",
-      "otherImages": ["../assets/older/1a.jpg"],
+      "otherImages": ["../assets/older/1.jpg"],
       "categories": "older",
       "type": "Fantasy"
     },
@@ -531,7 +531,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/2.jpg",
-      "otherImages": ["../assets/older/2a.jpg"],
+      "otherImages": ["../assets/older/2.jpg"],
       "categories": "older",
       "type": "Sci-Fi"
     },
@@ -542,7 +542,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/3.jpg",
-      "otherImages": ["../assets/older/3a.jpg"],
+      "otherImages": ["../assets/older/3.jpg"],
       "categories": "older",
       "type": "Fantasy"
     },
@@ -553,7 +553,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/4.jpg",
-      "otherImages": ["../assets/older/4a.jpg"],
+      "otherImages": ["../assets/older/4.jpg"],
       "categories": "older",
       "type": "Romance"
     },
@@ -564,7 +564,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/5.jpg",
-      "otherImages": ["../assets/older/5a.jpg"],
+      "otherImages": ["../assets/older/5.jpg"],
       "categories": "older",
       "type": "Action"
     },
@@ -575,7 +575,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/6.jpg",
-      "otherImages": ["../assets/older/6a.jpg"],
+      "otherImages": ["../assets/older/6.jpg"],
       "categories": "older",
       "type": "Fantasy"
     },
@@ -586,7 +586,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/7.jpg",
-      "otherImages": ["../assets/older/7a.jpg"],
+      "otherImages": ["../assets/older/7.jpg"],
       "categories": "older",
       "type": "Romance"
     },
@@ -597,7 +597,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/8.jpg",
-      "otherImages": ["../assets/older/8a.jpg"],
+      "otherImages": ["../assets/older/8.jpg"],
       "categories": "older",
       "type": "Action"
     },
@@ -608,7 +608,7 @@
       "discountPrice": 25,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/9.jpg",
-      "otherImages": ["../assets/older/9a.jpg"],
+      "otherImages": ["../assets/older/9.jpg"],
       "categories": "older",
       "type": "Crime"
     },
@@ -619,7 +619,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/10.jpg",
-      "otherImages": ["../assets/older/10a.jpg"],
+      "otherImages": ["../assets/older/10.jpg"],
       "categories": "older",
       "type": "Romance"
     },
@@ -630,7 +630,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/11.jpg",
-      "otherImages": ["../assets/older/11a.jpg"],
+      "otherImages": ["../assets/older/11.jpg"],
       "categories": "older",
       "type": "Fantasy"
     },
@@ -641,7 +641,7 @@
       "discountPrice": 20,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/12.jpg",
-      "otherImages": ["../assets/older/12a.jpg"],
+      "otherImages": ["../assets/older/12.jpg"],
       "categories": "older",
       "type": "Sci-Fi"
     }
