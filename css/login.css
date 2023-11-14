@@ -29,8 +29,8 @@ body {
   -o-transform: translate(-50%, -50%);
 }
 .logo-login img {
-  width: 110px;
-  height: 110px;
+  width: 115px;
+  height: 115px;
   padding: 10px;
   position: absolute;
   top: -57px;
@@ -40,7 +40,7 @@ body {
   border: 10px solid #fff;
   /* box-shadow: 0 15px 20px rgba(0, 0, 0, 0); */
   border-radius: 50%;
-  background-color: #eee;
+  background-color: #eaeaea;
 }
 .form-box h2 {
   font-size: 30px;
