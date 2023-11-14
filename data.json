@@ -608,7 +608,7 @@
       "discountPrice": 25,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla  assumenda aliquid quae eaque animi id? Ad adipisci porro enim nam doloremque rerum beatae ratione neque. Nihil blanditiis pariatur voluptates cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo officiis itaque quaerat ipsum, suscipit vel a pariatur incidunt velit iste tempore tempora necessitatibus maiores deleniti quos quasi. Debitis, cupiditate.",
       "imageUrl": "../assets/older/9.jpg",
-      "otherImages": ["../assets/older/9.jpg"],
+      "otherImages": ["../assets/older/9.jpg","../assets/older/9.jpg"],
       "categories": "older",
       "type": "Crime"
     },
