@@ -1,12 +1,14 @@
-[
-  {
-    "username": "user1",
-    "password": "password1",
-    "name": "User One"
-  },
-  {
-    "username": "user2",
-    "password": "password2",
-    "name": "User Two"
-  }
-]
+{
+  "users": [
+    {
+      "username": "user1",
+      "password": "password1",
+      "email": "user1@gmail.com"
+    },
+    {
+      "username": "user2",
+      "password": "password2",
+      "email": "user2@gmail.com"
+    }
+  ]
+}
