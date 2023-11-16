@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Store</title>
-    <!-- Render All Elements Normally -->
-    <link rel="stylesheet" href="../css/normalize.css" />
-    <!-- Font Awesome Library -->
-    <link rel="stylesheet" href="../css/all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="../css/login.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  </head>
 
-  <body>
-    <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Store</title>
+  <!-- Render All Elements Normally -->
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <!-- Font Awesome Library -->
+  <link rel="stylesheet" href="../css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+  <div class="videowrap">
+    <video playsinline autoplay muted loop>
+      <source src="../assets/images/vb4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="cont">
       <div class="form-box">
         <h2 id="title">Sign Up</h2>
         <form>
           <div class="logo-login">
             <img src="../assets/images/logo.png" alt="" />
           </div>
-          <div class="input-group">
-            <div class="input-field" id="emailField">
-              <i class="fa fa-solid fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fa fa-solid fa-user"></i>
-              <input type="text" placeholder="Name" />
-            </div>
 
-            <div class="input-field">
+          <div class="input-group">
+            <div class="input-field validate-input" data-validate="Valid email is required: ex@abc.xyz" id="emailField">
+              <i class="fa fa-solid fa-envelope"></i>
+              <input id="email" type="email" placeholder="Email"  />
+            </div>
+            <div class="input-field validate-input " data-validate="Name is required" id="nameField">
+              <i class="fa fa-solid fa-user"></i>
+              <input id="username"type="text" placeholder="Name" />
+            </div>
+            <div class="input-field validate-input " data-validate="Password is required" id="passwordField">
               <i class="fa fa-solid fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input id="password" type="password" placeholder="Password" />
+              <p id="toggle-password" >
+                <i id="eye" class="fa fa-eye disable"></i>
+                <i id="eye-slash" class="fa fa-eye-slash"></i>
+              </p>
             </div>
             <p id="lostPass" class="disable">
               Lost password <a>Click Here!</a>
             </p>
+            <p class="invalid" id="invalid">The Name or Password you entered isn’t connected to an account</p>
           </div>
           <div class="btn-field">
             <button type="button" id="signupBtn">Sign up</button>
@@ -54,5 +62,6 @@
       </div>
     </div>
     <script src="../js/login.js"></script>
-  </body>
+</body>
+
 </html>
