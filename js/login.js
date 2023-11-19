@@ -11,46 +11,45 @@ let eyeSlash = document.getElementById("eye-slash");
 let password = document.getElementById("password");
 let errorP = document.getElementById("passwordField");
 let errorN = document.getElementById("nameField");
+let errorE = document.getElementById("emailField");
 togglePasswordButton.addEventListener("click", togglePassword);
-let f = 0;
+let f = 2;
+let flag = true;
 signinBtn.onclick = function () {
+  rest();
   emailField.style.display = "none";
   title.innerHTML = "Sign In";
   signupBtn.classList.add("disable");
   signinBtn.classList.remove("disable");
   lostPass.classList.remove("disable");
-
   if (f == 1) {
     login();
   }
   f = 1;
 };
 signupBtn.onclick = function () {
-  f = 0;
   invalid.style.display = "none";
-  errorN.classList.remove("alert-validate");
-  errorP.classList.remove("alert-validate");
+  rest();
   emailField.style.display = "flex";
   title.innerHTML = "Sign Up";
   signupBtn.classList.remove("disable");
   signinBtn.classList.add("disable");
   lostPass.classList.add("disable");
+  if (f == 2) {
+    register();
+  }
+  f = 2;
 };
-
+function rest() {
+  errorN.classList.remove("alert-validate");
+  errorP.classList.remove("alert-validate");
+}
 fetch("../users.json")
   .then((response) => response.json())
   .then((jsonData) => {
     users = jsonData.users;
   })
-  .then(() => {
-    waitData();
-  })
   .catch((error) => console.error("Error fetching the data:", error));
-
-function waitData() {
-  //   signinBtn.addEventListener("click", login);
-}
-
 function togglePassword() {
   var passwordInput = document.getElementById("password");
   eyeSlash.classList.toggle("disable");
@@ -67,11 +66,13 @@ function login() {
 
   if (!username) {
     errorN.classList.add("alert-validate");
+    errorN.setAttribute("data-validate", "Name is required");
   } else {
     errorN.classList.remove("alert-validate");
   }
   if (!password) {
     errorP.classList.add("alert-validate");
+    errorP.setAttribute("data-validate", "Password is required");
   } else {
     errorP.classList.remove("alert-validate");
   }
@@ -87,4 +88,69 @@ function login() {
     console.log("Invalid username or password. Please try again.");
   }
 }
-function register() {}
+function register() {
+  let newUsername = document.getElementById("username").value;
+  let newPassword = document.getElementById("password").value;
+  let newEmail = document.getElementById("email").value;
+
+  let existingUser = users.find((u) => u.username === newUsername);
+
+  if (existingUser) {
+    console.log(existingUser);
+    errorN.classList.add("alert-validate");
+    errorN.setAttribute("data-validate", "Username already exists");
+    flag = false;
+  } else {
+    errorN.classList.remove("alert-validate");
+    //check data enterd or not
+    if (!newUsername) {
+      errorN.classList.add("alert-validate");
+      errorN.setAttribute("data-validate", "Name is required");
+      flag = false;
+    } else {
+      errorN.classList.remove("alert-validate");
+    }
+    if (!newPassword) {
+      errorP.classList.add("alert-validate");
+      errorP.setAttribute("data-validate", "Password is required");
+      flag = false;
+    } else {
+      errorP.classList.remove("alert-validate");
+    }
+    if (!newEmail) {
+      errorE.classList.add("alert-validate");
+      errorE.setAttribute(
+        "data-validate",
+        "Valid email is required: ex@abc.xyz"
+      );
+      flag = false;
+    } else {
+      errorE.classList.remove("alert-validate");
+    }
+
+    console.log(users);
+    if (flag === true) {
+      console.log("y");
+    } else {
+      console.log("miss");
+    }
+  }
+
+  //   // Add the new user to the array
+  //   const newUser = { username: newUsername, password: newPassword };
+  //   users.push(newUser);
+
+  //   // Save the updated user data to the JSON file (again, server-side logic is needed in a real scenario)
+  //   // This is a simplified example and may not work in all environments due to security restrictions
+  //   const blob = new Blob([JSON.stringify(users)], { type: 'application/json' });
+  //   const url = window.URL.createObjectURL(blob);
+  //   const a = document.createElement('a');
+  //   a.href = url;
+  //   a.download = 'users.json';
+  //   document.body.appendChild(a);
+  //   a.click();
+  //   document.body.removeChild(a);
+
+  //   successElement.textContent = 'Registration successful! You can now log in.';
+  //   errorElement.textContent = '';
+}

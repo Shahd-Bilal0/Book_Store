@@ -103,6 +103,11 @@ form #emailField {
   visibility: visible;
   opacity: 1;
 }
+.input-field:focus-within:before {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .alert-validate {
   position: relative;
 }
