@@ -15,6 +15,7 @@ let errorE = document.getElementById("emailField");
 togglePasswordButton.addEventListener("click", togglePassword);
 let f = 2;
 let flag = true;
+
 signinBtn.onclick = function () {
   rest();
   emailField.style.display = "none";
@@ -43,6 +44,7 @@ signupBtn.onclick = function () {
 function rest() {
   errorN.classList.remove("alert-validate");
   errorP.classList.remove("alert-validate");
+  errorE.classList.remove("alert-validate");
 }
 fetch("../users.json")
   .then((response) => response.json())
@@ -130,27 +132,17 @@ function register() {
 
     console.log(users);
     if (flag === true) {
-      console.log("y");
+      //Add the new user to the array
+      const newUser = {
+        username: newUsername,
+        password: newPassword,
+        email: newEmail,
+      };
+      users.push(newUser);
+      console.log(users);
+      const jsonNewUser = JSON.stringify(users);
     } else {
       console.log("miss");
     }
   }
-
-  //   // Add the new user to the array
-  //   const newUser = { username: newUsername, password: newPassword };
-  //   users.push(newUser);
-
-  //   // Save the updated user data to the JSON file (again, server-side logic is needed in a real scenario)
-  //   // This is a simplified example and may not work in all environments due to security restrictions
-  //   const blob = new Blob([JSON.stringify(users)], { type: 'application/json' });
-  //   const url = window.URL.createObjectURL(blob);
-  //   const a = document.createElement('a');
-  //   a.href = url;
-  //   a.download = 'users.json';
-  //   document.body.appendChild(a);
-  //   a.click();
-  //   document.body.removeChild(a);
-
-  //   successElement.textContent = 'Registration successful! You can now log in.';
-  //   errorElement.textContent = '';
 }
