@@ -3,6 +3,7 @@
   --darkblue-color: #004380;
   --lightblue-color: #004380;
   --darkYellow: #febd1a;
+  --second-color: #edf1ff;
   --section-padding: 60px;
   --main-duration: 0.3s;
   --v: 0;
@@ -173,19 +174,20 @@ nav ul li:not(:last-child) a {
 
 /* button up */
 .up {
-  background-color: transparent;
+  background-color: #fbb710;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
   border: none;
-  padding: 6px;
-  border-radius: 4px;
   position: fixed;
-  bottom: 5px;
-  right: 3px;
-  z-index: 5;
+  bottom: 60px;
+  right: 60px;
+  height: 40px;
+  width: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  z-index: 15;
   display: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  transition-duration: 500ms;
 }
 /* Start footer Style */
 footer {

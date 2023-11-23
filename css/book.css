@@ -63,7 +63,6 @@ body {
   height: auto;
 }
 /* Start product listing page */
-
 .plp .con {
   background-color: #f8f9fa;
 }
@@ -75,7 +74,7 @@ body {
 }
 .plp .con i {
   margin-right: 0.5rem;
-  font-size: 17px;
+  font-size: 20px;
   color: var(--darkblue-color);
 }
 .plp a {

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart-page</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--  -->
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="../css/share.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="../js/share.js"></script>
+  </head>
+
+  <body>
+    <div class="scroller"></div>
+    <button class="up">
+      <i class="fa fa-angle-up"></i>
+    </button>
+    <!-- Start Header  -->
+    <header></header>
+    <!-- End   Header -->
+
+    <!-- Start Hero Banner  -->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="row">
+          <h1>Shopping Cart</h1>
+          <img class="image" src="../assets/images/header-img.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Banner  -->
+    <div class="con">
+      <div class="container">
+        <div class="Breadcrumbs">
+          <a href="index.html">Home</a> <span> &nbsp;/&nbsp;</span>
+          <a href="book.html">Shop</a> <span> &nbsp;/&nbsp;</span>
+          <strong>Cart</strong>
+        </div>
+        <div class="site-top-icons">
+          <a href="#"><i class="fa fa-user"></i></a>
+          <a href="#"><i class="fa fa-heart"></i></a>
+          <a href="#"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Star cart -->
+    <div class="container">
+      <section class="cart">
+        <div class="col cart-info">
+          <table>
+            <thead>
+              <tr>
+                <th>Products</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <!-- <img width="50" src="../assets/children/10.jpg" alt="" /> -->
+                  The 50 States
+                </td>
+                <td>$150</td>
+                <td>
+                  <div class="input-group">
+                    <button class="btn mi-btn">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <input type="text" class="form-control" value="1" />
+                    <button class="btn pl-btn">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </td>
+                <td>$150</td>
+                <td>
+                  <button class="btn ti-btn">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5" style="border: none; padding-top: 50px">
+                  <h2 class="em-h">No Items In The Cart</h2>
+                  <a class="btn empty" href="book.html"> Continue Shopping </a>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="col to-pay">
+          <div class="order-summary">
+            <h4>Order Summary</h4>
+          </div>
+          <div class="cart-body">
+            <div class="col-f">
+              <h6>Subtotal</h6>
+              <h6>0$</h6>
+            </div>
+            <div class="col-f">
+              <h6>Shipping</h6>
+              <h6>0$</h6>
+            </div>
+          </div>
+          <div class="checkout">
+            <div class="col-f">
+              <h5>Total</h5>
+              <h5>0$</h5>
+            </div>
+            <button class="btn ch-btn">Proceed to Checkout</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End cart -->
+
+    <!-- Start Fotter -->
+    <footer></footer>
+    <!-- End   Footer -->
+    <script src="../js/cart.js"></script>
+  </body>
+</html>
