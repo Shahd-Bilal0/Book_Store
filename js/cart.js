@@ -25,10 +25,14 @@ btn.onclick = function () {
 //
 let tbody = document.querySelector("table tbody");
 let tfoot = document.querySelector("table tfoot");
+let total = document.getElementById("total");
+let subtotal = document.getElementById("subtotal");
+let sum = 0;
 //
 readItems();
 function readItems() {
   tbody.innerHTML = ``;
+  sum = 0;
   const keys = Object.keys(localStorage);
   if (keys.length == 0) {
     tfoot.style.display = "";
@@ -65,6 +69,7 @@ function readItems() {
       </button>
     </td>
   `;
+    sum += item.price * item.value;
     tbody.appendChild(tr);
     // Add event listener to the "Remove-btn" button in this row
     let tiBtn = tr.querySelector(".ti-btn");
@@ -100,6 +105,8 @@ function readItems() {
       readItems();
     });
   });
+  total.innerHTML = `${sum}$`;
+  subtotal.innerHTML = `${sum}$`;
 }
 function storeItem(id, item) {
   const productString = JSON.stringify(item);
