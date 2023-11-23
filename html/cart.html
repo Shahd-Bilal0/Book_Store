@@ -41,7 +41,7 @@
       </div>
     </section>
     <!-- End Hero Banner  -->
-    <div class="con">
+    <div id="con" class="con">
       <div class="container">
         <div class="Breadcrumbs">
           <a href="index.html">Home</a> <span> &nbsp;/&nbsp;</span>
@@ -51,18 +51,21 @@
         <div class="site-top-icons">
           <a href="#"><i class="fa fa-user"></i></a>
           <a href="#"><i class="fa fa-heart"></i></a>
-          <a href="#"><i class="fa fa-shopping-cart"></i></a>
+          <div class="cart-count">
+            <span id="count" class="count">1</span>
+            <a href="#con"><i class="fa fa-shopping-cart"></i></a>
+          </div>
         </div>
       </div>
     </div>
     <!-- Star cart -->
     <div class="container">
       <section class="cart">
-        <div class="col cart-info">
+        <div id="cart-info" class="col cart-info">
           <table>
             <thead>
               <tr>
-                <th>Products</th>
+                <th colspan="2">Products</th>
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>

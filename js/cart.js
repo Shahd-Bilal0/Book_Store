@@ -27,6 +27,8 @@ let tbody = document.querySelector("table tbody");
 let tfoot = document.querySelector("table tfoot");
 let total = document.getElementById("total");
 let subtotal = document.getElementById("subtotal");
+let cartCount = document.getElementById("count");
+
 let sum = 0;
 //
 readItems();
@@ -46,10 +48,10 @@ function readItems() {
     const item = JSON.parse(itemString);
     let tr = document.createElement("tr");
     tr.innerHTML = `      
-    <td>
-      <!-- <img width="50" src="../assets/children/10.jpg" alt="" /> -->
-      ${item.title}
+    <td style="border-right: 1px solid #fff;">
+       <img width="60" src=${item.imageUrl} alt="" /> 
     </td>
+    <td style="text-align:left">  ${item.title}</td>
     <td>$${item.price}</td>
     <td>
       <div class="input-group">
@@ -107,6 +109,7 @@ function readItems() {
   });
   total.innerHTML = `${sum}$`;
   subtotal.innerHTML = `${sum}$`;
+  cartCount.innerHTML = keys.length;
 }
 function storeItem(id, item) {
   const productString = JSON.stringify(item);

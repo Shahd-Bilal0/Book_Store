@@ -220,7 +220,7 @@ function displayProduct(products) {
             </div>
             <div class="info">
               <a href="" class="btn"><i class="icon fas fa-heart"></i></a>
-              <a href="" class="btn"><i class="icon fas fa-shopping-cart"></i></a>
+              <a href="../html/product-page.html#pdp/?id=${id}" class="btn"><i class="icon fas fa-shopping-cart"></i></a>
               <a href="../html/product-page.html#pdp/?id=${id}" class="btn eye"><i class="icon fas fa-eye"></i></a>
             </div>
           `;
@@ -357,3 +357,7 @@ let bcat = document.querySelector(".bcat h3");
 bcat.addEventListener("click", () => {
   window.location.href = "../html/categories.html#byType";
 });
+//cart count
+let cartCount = document.getElementById("count");
+const keys = Object.keys(localStorage);
+cartCount.innerHTML = keys.length;
