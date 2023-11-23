@@ -22,3 +22,86 @@ btn.onclick = function () {
     behavior: "smooth",
   });
 };
+//
+let tbody = document.querySelector("table tbody");
+let tfoot = document.querySelector("table tfoot");
+//
+readItems();
+function readItems() {
+  tbody.innerHTML = ``;
+  const keys = Object.keys(localStorage);
+  if (keys.length == 0) {
+    tfoot.style.display = "";
+    tbody.style.display = "none";
+  } else {
+    tfoot.style.display = "none";
+    tbody.style.display = "";
+  }
+  keys.forEach((key) => {
+    const itemString = localStorage.getItem(key);
+    const item = JSON.parse(itemString);
+    let tr = document.createElement("tr");
+    tr.innerHTML = `      
+    <td>
+      <!-- <img width="50" src="../assets/children/10.jpg" alt="" /> -->
+      ${item.title}
+    </td>
+    <td>$${item.price}</td>
+    <td>
+      <div class="input-group">
+        <button class="btn mi-btn">
+          <i class="fa fa-minus"></i>
+        </button>
+        <input type="text" class="form-control" value="${item.value}" />
+        <button class="btn pl-btn">
+          <i class="fa fa-plus"></i>
+        </button>
+      </div>
+    </td>
+    <td>$${item.price * item.value}</td>
+    <td>
+      <button class="btn ti-btn">
+        <i class="fa fa-times"></i>
+      </button>
+    </td>
+  `;
+    tbody.appendChild(tr);
+    // Add event listener to the "Remove-btn" button in this row
+    let tiBtn = tr.querySelector(".ti-btn");
+    let plBtn = tr.querySelector(".pl-btn");
+    let miBtn = tr.querySelector(".mi-btn");
+    const input = tr.querySelector("input");
+    tiBtn.addEventListener("click", () => {
+      localStorage.removeItem(item.id);
+      readItems();
+    });
+
+    plBtn.addEventListener("click", () => {
+      let value = parseInt(input.value);
+      value++;
+      input.value = value;
+      miBtn.classList.remove("disabled");
+      item.value = value;
+      storeItem(item.id, item);
+      readItems();
+    });
+    miBtn.addEventListener("click", () => {
+      let value = parseInt(input.value);
+      if (value > 1) {
+        value--;
+        input.value = value;
+      }
+      if (value == 1) {
+        console.log("hi");
+        miBtn.classList.add("disabled");
+      }
+      item.value = value;
+      storeItem(item.id, item);
+      readItems();
+    });
+  });
+}
+function storeItem(id, item) {
+  const productString = JSON.stringify(item);
+  localStorage.setItem(id, productString);
+}

@@ -29,15 +29,16 @@ let desc = document.querySelector(".productDescription");
 const input = document.querySelector(".inputs input");
 const minusBtn = document.querySelector(".btn.minus");
 const plusBtn = document.querySelector(".btn.plus");
+const addBtn = document.querySelector(".btn.add");
 let carousel = document.querySelector(".carousel");
 let Secondcarousel = document.querySelector(".second-carousel");
 let prevButton = document.getElementById("prevC");
 let nextButton = document.getElementById("nextC");
 let nameP = document.getElementById("name-product");
+let value = 1;
 let currentIndex = 0;
 const queryString = window.location.href;
 var givenId = queryString.split("=")[1];
-console.log(givenId);
 fetch("../data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -47,7 +48,6 @@ fetch("../data.json")
   .then(() => waitData());
 
 function waitData() {
-  console.log(selectedProduct);
   //data
   title.innerHTML = `${selectedProduct.title.toUpperCase()}`;
   nameP.innerHTML = `${selectedProduct.title}`;
@@ -121,7 +121,7 @@ function waitData() {
   //quantity
   // Decrease the value
   minusBtn.addEventListener("click", () => {
-    let value = parseInt(input.value);
+    value = parseInt(input.value);
     if (value > 1) {
       value--;
       input.value = value;
@@ -133,10 +133,20 @@ function waitData() {
   });
   // Increase the value
   plusBtn.addEventListener("click", () => {
-    let value = parseInt(input.value);
+    value = parseInt(input.value);
     value++;
     input.value = value;
     minusBtn.classList.remove("disabled");
   });
 }
 ///
+addBtn.addEventListener("click", () => {
+  selectedProduct.value = value;
+  storeItem();
+  window.location.href = "../html/cart.html";
+});
+//
+function storeItem() {
+  const productString = JSON.stringify(selectedProduct);
+  localStorage.setItem(`${givenId}`, productString);
+}
